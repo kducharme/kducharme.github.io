@@ -1,0 +1,118 @@
+/* Global variables */
+
+:root {
+  --primaryColor: #1D2936;
+  --secondaryColor: #b3b3b1;
+  --heavyWeight: 800;
+  --mediumWeight: 600;
+  --lightWeight: 400;
+  --bgColor: #fff;
+  --fontPrimary: 'lato';
+  --fontSecondary: 'merriweather';
+  display: flex;
+}
+
+/* Global styles */
+
+h1, h2, h3, h4, h5, h6, p, a {
+  font-family: var(--fontPrimary);
+}
+
+body {
+  width: 100%;
+  padding: 0px 50px 50px 50px;
+}
+
+/* Navigation styles */
+
+nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav--logo {
+  font-size: 13px;
+  width: 30%;
+}
+
+.nav--link {
+  margin: 0px 10px 0px 10px;
+  color: var(--primaryColor);
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.nav--link:hover {
+  opacity: .5;
+}
+
+/* Hero section styles */
+
+.hero {
+  height: 80vh;
+  padding: 0px 220px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+
+.hero--h2 {
+  color: var(--secondaryColor);
+  font-weight: var(--lightWeight);
+  padding: 0px 0px 10px 0px;
+  font-size: 1em;
+  margin: none;
+}
+
+.hero--h1 {
+  color: var(--primaryColor);
+  font-weight: var(--heavyWeight);
+  line-height: 1.5;
+  font-size: 3em;
+  margin: 0px;
+}
+
+/* Cards section styles */
+
+.cards {
+  display: flex;
+}
+
+.card {
+  border-radius: 3px; 
+  padding: 50px;
+  text-align: center;
+  color: white;
+}
+
+.card--title {
+  font-weight: var(--heavyWeight);
+}
+
+.card--body {
+  font-weight: var(--lightWeight);
+  opacity: .7;
+  line-height: 1.4;
+}
+
+.card--one {
+  background-color: #3B60E4;
+}
+
+.card--two {
+  background-color: #E7415C;
+  margin: 0px 25px 0px 25px;
+}
+
+.card--three {
+  background-color: #09BC8A;
+}
+
+/* Portfolio section styling */
+
+.portfolio {
+  height: 100vh;
+}
