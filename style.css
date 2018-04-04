@@ -23,19 +23,10 @@ body {
   margin: 0px;
 }
 
-/* Landing section styles */
-
-.landing {
-  height: 90vh;
-  background-color: #F7F8F9;
-  padding: 15px 50px 0px 50px;
-  border: 20px solid white;
-}
-
 /* Navigation styles */
 
 nav {
-  width: 100%;
+  padding: 5px 0px 0px 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -43,12 +34,14 @@ nav {
 }
 
 .nav--logo {
+  font-weight: var(--heavyWeight);
+  color: var(--secondaryColor);
   font-size: 13px;
   width: 30%;
 }
 
 .nav--link {
-  margin: 0px 10px 0px 10px;
+  margin: 0px 50px 0px 10px;
   color: var(--primaryColor);
   text-decoration: none;
   font-size: 13px;
@@ -61,8 +54,8 @@ nav {
 /* Hero section styles */
 
 .hero {
-  height: 80vh;
-  padding: 0px 220px 0px 0px;
+  height: 86vh;
+  padding: 0px 220px 0px 50px;
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -87,40 +80,55 @@ nav {
 
 /* Cards section styles */
 
-.cards {
+.more {
   background: var(--bgColor);
-  display: flex;
-  width: 100%;
+  padding: 5px 50px 0px 50px;
 }
 
-.card {
-  border-radius: 3px; 
-  padding: 50px;
-  text-align: center;
+.more--connect {
+  background-color: var(--primaryColor);
+  border-radius: 5px 5px 0px 0px;
+  height: 50px;
+  width: 100%;
+  padding: 15px 0px 0px 0px;
+  display: flex;
+  justify-content: space-between;
   color: white;
 }
 
-.card--title {
-  font-weight: var(--heavyWeight);
+.more--connect-full {
+  background-color: var(--primaryColor);
+  padding: 15px 0px 0px 0px;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  height: 100vh;
+  width: 100%;
 }
 
-.card--body {
-  font-weight: var(--lightWeight);
-  opacity: .7;
-  line-height: 1.4;
+.more--view-cta {
+  font-weight: var(--mediumWeight);
+  margin: 0px 0px 0px 50px;
+  width: 50%;
+  font-size: 1em;
 }
 
-.card--one {
-  background-color: #3B60E4;
+.more--view-cta:hover {
+  cursor: pointer;
+  opacity: .5;
 }
 
-.card--two {
-  background-color: #E7415C;
-  margin: 0px 25px 0px 25px;
+.more--icons {
+  margin: 0px 50px 0px 50px;
 }
 
-.card--three {
-  background-color: #09BC8A;
+.more--connect-svg {
+  height: 20px;
+  padding: 0px 0px 0px 15px;
+}
+
+.more--connect-svg:hover {
+  opacity: .5;
 }
 
 /* Portfolio section styles */
