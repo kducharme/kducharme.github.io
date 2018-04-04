@@ -8,42 +8,42 @@
 
 <body>
 
-  <div class="add-post">
+  <div class="post">
 
-    <div class="post-info">
-      <p class="type">
-        Date created: </p>
-      <p class="author" id="date"> </p>
+    <div class="details">
+      <p class="details--descript">Date created: </p>
+      <p class="details--data" id="date"> </p>
 
-      <p class="type">
-        Author: </p>
-      <p class="author" id="author"> </p>
+      <p class="details--descript">Author: </p>
+      <p class="details--data" id="author"> </p>
 
-      <p class="type">
-        Status: </p>
-      <p class="author" id="status"> </p>
-
-    </div>
-    <hr class="divider">
-
-    <div class="input-area">
-      <textarea rows="2" id="title" class="title" placeholder="Enter post title"></textarea>
-      <div id="post-body" class="post-body" contenteditable=true data-text="Start writing...">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ommodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+      <p class="details--descript">Status: </p>
+      <p class="details--data" id="status"> </p>
     </div>
 
-    <hr class="divider">
-    <div class="post-actions">
-      <div class="text-options" id="textOptions">
+    <hr>
+
+    <div class="input">
+      <textarea rows="2" id="title" class="input--title" placeholder="Enter post title"></textarea>
+      <div id="post-body" class="input--body" contenteditable=true data-text="Start writing...">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ommodo consequat.</div>
+    </div>
+
+    <hr>
+    <div class="actions">
+
+      <div class="actions--text" id="textOptions">
           <span id="big" class="big">H1</span>
           <span id="med" class="med">H2</span>
           <span id="bold" class="bold">B</span>
           <span id="italic" class="italic">i</span>
           <span id="clear" class="clear">Clear</span>
       </div>
-      <div class="publish-post">
-        <button id="save-draft" class="save-draft">Save as draft</button>
-        <button id="submit-post" class="submit-post">Publish post</button>
+
+      <div class="actions__publish">
+        <button id="save-draft" class="actions--save">Save as draft</button>
+        <button id="submit-post" class="actions--post">Publish post</button>
       </div>
+
     </div>
 
   </div>
@@ -64,7 +64,11 @@
   </script>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
+
+
+  <script src="app.js"></script>
   <script src="knook.js"></script>
+  <script src="posts.js"></script>
 </body>
 
 </html>

@@ -2,12 +2,22 @@
 
 <head>
   <title>Notes</title>
-  <link href="blog.css" rel="stylesheet">
   <link href="style.css" rel="stylesheet">
+  <link href="blog.css" rel="stylesheet">
 </head>
 
-<body class="posts-body">
-  <div id="printed-posts">
+<body>
+
+  <nav id='nav' class='nav'>
+    <p class='nav--logo'>Kyle Ducharme</p>
+    <div class='nav__links'>
+      <a href='#' class='nav--link'>Home</a>
+      <a href='blog/posts.html' class='nav--link'>Blog</a>
+      <a href='#' class='nav--link'>Contact</a>
+    </div>
+  </nav>
+
+  <div id="printed-posts" class='posts-body'>
   </div>
 
   <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
@@ -24,10 +34,11 @@
     };
     firebase.initializeApp(config);
   </script>
-   <script
-   src="https://code.jquery.com/jquery-3.3.1.min.js"
-   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-   crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+
+  <script src="app.js"></script>
+  <script src="knook.js"></script>
   <script src="posts.js"></script>
 </body>
 
