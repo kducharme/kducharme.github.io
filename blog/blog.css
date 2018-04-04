@@ -57,6 +57,7 @@ h1, h2, h3, h4, h5, h6, p {
     color: var(--secondaryColor);
     font-family: var(--fontPrimary);
 }
+
 .input-area {
     margin: 50px;
 }
@@ -214,10 +215,6 @@ textarea:focus, textarea:active input:focus, input:active {
 .big:hover, .med:hover, .bold:hover, .italic:hover, .clear:hover {
     cursor: pointer;
     opacity: .5;
-}
-
-.disable {
-    opacity: 0;
 }
 
 .header-one {
