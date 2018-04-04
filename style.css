@@ -20,7 +20,16 @@ h1, h2, h3, h4, h5, h6, p, a {
 
 body {
   width: 100%;
-  padding: 0px 50px 50px 50px;
+  margin: 0px;
+}
+
+/* Landing section styles */
+
+.landing {
+  height: 90vh;
+  background-color: #F7F8F9;
+  padding: 15px 50px 0px 50px;
+  border: 20px solid white;
 }
 
 /* Navigation styles */
@@ -30,6 +39,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: transparent;
 }
 
 .nav--logo {
@@ -59,14 +69,6 @@ nav {
   justify-content: center;
 }
 
-.hero--h2 {
-  color: var(--secondaryColor);
-  font-weight: var(--lightWeight);
-  padding: 0px 0px 10px 0px;
-  font-size: 1em;
-  margin: none;
-}
-
 .hero--h1 {
   color: var(--primaryColor);
   font-weight: var(--heavyWeight);
@@ -75,12 +77,20 @@ nav {
   margin: 0px;
 }
 
+.hero--h2 {
+  color: var(--secondaryColor);
+  font-weight: var(--lightWeight);
+  padding: 0px 0px 10px 0px;
+  font-size: 1em;
+  margin: none;
+}
+
 /* Cards section styles */
 
 .cards {
+  background: var(--bgColor);
   display: flex;
-  justify-content: center;
-  padding: 40px 0px 0px 0px;
+  width: 100%;
 }
 
 .card {
@@ -113,8 +123,13 @@ nav {
   background-color: #09BC8A;
 }
 
-/* Portfolio section styling */
+/* Portfolio section styles */
 
 .portfolio {
   height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+/* Call to action section styles */
