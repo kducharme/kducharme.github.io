@@ -135,14 +135,14 @@ textarea:focus, textarea:active input:focus, input:active {
     padding: 30px 0px 0px 50px;
 }
 
-.actions__publish {
+.actions--post {
     width: 35%;
     max-width: 250px;
     margin: 25px 50px 20px 30px;
     display: flex;
 }
 
-.actions--post:hover, .actions--post:focus, .actions--post:active  {
+.actions--post--publish:hover, .actions--post--publish:focus, .actions--post--publish:active  {
     cursor: pointer;
     -webkit-transition: none;
     -moz-transition: none;
@@ -151,7 +151,7 @@ textarea:focus, textarea:active input:focus, input:active {
     outline: none;
 }
 
-.actions--post, .actions--post:target {
+.actions--post--publish, .actions--post--publish:target {
     background-color: var(--bgColor);
     color: var(--primaryColor);
     height: 42px;
@@ -163,7 +163,7 @@ textarea:focus, textarea:active input:focus, input:active {
     border-radius: 4px;
 }
 
-.actions--save {
+.actions--post--save {
     min-width: 100px;
     color: var(--primaryColor);
     font-weight: 600;
