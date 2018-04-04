@@ -129,12 +129,6 @@ textarea:focus, textarea:active input:focus, input:active {
     display: flex;
 }
 
-.actions--text {
-    width: 65%;
-    display: block;
-    padding: 30px 0px 0px 50px;
-}
-
 .actions--post {
     width: 35%;
     max-width: 250px;
@@ -174,6 +168,12 @@ textarea:focus, textarea:active input:focus, input:active {
 }
 
 /* CONTENT STYLING */
+
+.actions--text {
+    width: 65%;
+    display: block;
+    padding: 30px 0px 0px 50px;
+}
 
 .big {
     font-size: 22px;
