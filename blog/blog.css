@@ -4,6 +4,7 @@
     --heavyWeight: 800;
     --mediumWeight: 600;
     --lightWeight: 400;
+    --thinWeight: 200;
     --bgColor: #fff;
     --fontPrimary: 'lato';
     --fontSecondary: 'merriweather';
@@ -79,12 +80,12 @@ hr {
 }
 
 .input--body {
+    color: var(--PrimaryColor);
+    font-family: var(--fontSecondary);
+    font-weight: var(--thinWeight);
     font-size: 15px;
     min-height: 340px;
     line-height: 1.7;
-    font-family: var(--fontSecondary);
-    color: var(--PrimaryColor);
-    font-weight: 200;
     height: 100%;
 }
 
@@ -123,25 +124,25 @@ textarea:focus, textarea:active input:focus, input:active {
 
 /* Post actions section */
 
-.post-actions {
+.actions {
     width: 100%;
     display: flex;
 }
 
-.text-options {
+.actions--text {
     width: 65%;
     display: block;
     padding: 30px 0px 0px 50px;
 }
 
-.publish-post {
+.actions__publish {
     width: 35%;
     max-width: 250px;
     margin: 25px 50px 20px 30px;
     display: flex;
 }
 
-.submit-post:hover, .submit-post:focus, .submit-post:active  {
+.actions--post:hover, .actions--post:focus, .actions--post:active  {
     cursor: pointer;
     -webkit-transition: none;
     -moz-transition: none;
@@ -150,7 +151,7 @@ textarea:focus, textarea:active input:focus, input:active {
     outline: none;
 }
 
-.submit-post, .submit-post:target {
+.actions--post, .actions--post:target {
     background-color: var(--bgColor);
     color: var(--primaryColor);
     height: 42px;
@@ -162,7 +163,7 @@ textarea:focus, textarea:active input:focus, input:active {
     border-radius: 4px;
 }
 
-.save-draft {
+.actions--save {
     min-width: 100px;
     color: var(--primaryColor);
     font-weight: 600;
