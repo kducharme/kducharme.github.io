@@ -1,20 +1,8 @@
-/* VARIABLE */
-
-:root {
-    --primaryColor: #1D2936;
-    --secondaryColor: #b3b3b1;
-    --bgColor: #fff;
-    --fontPrimary: 'lato';
-    --fontSecondary: 'merriweather';
-}
+/* Global styles */
 
 body {
     display: flex;
     padding: 2% 18% 0 18%;
-}
-
-h1, h2, h3, h4, h5, h6, p {
-    font-family: var(--fontPrimary);
 }
 
 /* BACKGROUND STRUCTURE */
