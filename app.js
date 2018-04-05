@@ -7,18 +7,23 @@ const showAbout = (e) => {
     resume = document.querySelector('#resume'),
         clickLocation = e.screenY;
 
-        aboutContainer.classList.remove('more', 'about--before');
-        viewButton.classList.add('hide');
-        hideButton.classList.remove('hide');
-        bottomBar.classList.add('more--connect-full');
+
+    aboutContainer.classList.remove('more', 'about--before');
+    socialIcons.classList.add('hide');
+    bottomBar.classList.add('more--connect-full');
+
+    setTimeout(() => {
+        bottomBar.classList.remove('more--connect');
         aboutContainer.classList.add('about--after');
-        
-        setTimeout(() => {
-        bottomBar.classList.remove('more--contect');
         window.scroll({ top: clickLocation, left: 0, behavior: 'smooth' });
-        socialIcons.classList.add('hide');
         resume.classList.remove('hide');
     }, 600)
+
+    viewButton.classList.add('hide');
+    hideButton.classList.remove('hide')
+    hideButton.classList.add('more--view-cta-after');
+
+
 };
 
 // Event listener for clicking learn more

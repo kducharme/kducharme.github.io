@@ -3,9 +3,11 @@
 :root {
   --primaryColor: #1D2936;
   --secondaryColor: #b3b3b1;
+  --accentColor: #FFD453;
   --heavyWeight: 800;
   --mediumWeight: 600;
   --lightWeight: 400;
+  --thinWeight: 200;
   --bgColor: #fff;
   --fontPrimary: 'lato';
   --fontSecondary: 'merriweather';
@@ -118,6 +120,7 @@ nav {
   width: 50%;
   height: 20px;
   font-size: 1em;
+  transition: all 2s ease;
 }
 
 .more--view-cta:hover {
@@ -151,33 +154,49 @@ nav {
   flex-direction: column;
   color: white;
   border-radius: 5px;
+  height: 100vh;
 }
 
 .more--connect-full {
   background-color: var(--primaryColor);
   align-items: flex-start;
+  flex-direction: column;
   transition: height .75s ease;
   padding: 25px 0px 0px 0px;
   border-radius: 0px;
   height: 100vh;
-  color: white;
-}
-
-.more--view-cta--after {
-  font-weight: var(--mediumWeight);
-  margin: 0px 0px 0px 50px;
-  width: 50%;
-  height: 5%;
-  height: 20px;
-  font-size: 1em;
+  padding: 0px 50px 0px 50px;
 }
 
 .resume {
   justify-content: center;
+  padding: 50px 50px 0px 50px;
 }
 
+.more--view-cta-after {
+  font-weight: var(--mediumWeight);
+  margin: 30px 0px 0px 50px;
+  width: 50%;
+  height: 20px;
+  font-size: .8em;
+  transition: all 2s ease;
+}
 
+.resume--head {
+  font-family: var(--fontSecondary);
+  font-size: 2em;
+  margin: 0px 0px 15px 0px;
+}
+.resume--title {
+  /* color: var(--accentColor); */
+  font-weight: var(--mediumWeight);
+  padding: 24px 0px 0px 0px;
+  font-size: 1em;
+}
 
-
-/* About section styles */
-`
+.resume--descript {
+  font-weight: var(--thinWeight);
+  line-height: 1.7;
+  font-size: 1em;
+  opacity:.8;
+}
