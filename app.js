@@ -1,42 +1,28 @@
+const showAbout = (e) => {
+    let aboutContainer = document.querySelector('#about'),
+        bottomBar = document.querySelector('#learn-more'),
+        socialIcons = document.querySelector('#icons'),
+        viewButton = document.querySelector('#view'),
+        hideButton = document.querySelector('#back')
+    resume = document.querySelector('#resume'),
+        clickLocation = e.screenY;
 
-const fullScreen = (e) => {
-    let bg = document.querySelector('#learn-more'),
-        container = document.querySelector('#more'),
-        backTop = document.querySelector('#learn'),
-        location = e.screenY;
+        aboutContainer.classList.remove('more', 'about--before');
+        viewButton.classList.add('hide');
+        hideButton.classList.remove('hide');
+        bottomBar.classList.add('more--connect-full');
+        aboutContainer.classList.add('about--after');
+        
+        setTimeout(() => {
+        bottomBar.classList.remove('more--contect');
+        window.scroll({ top: clickLocation, left: 0, behavior: 'smooth' });
+        socialIcons.classList.add('hide');
+        resume.classList.remove('hide');
+    }, 600)
+};
 
-    bg.classList.add('more--connect-full'),
-    bg.classList.remove('more--connect');
-    container.classList.remove('more');
-    
-    setTimeout(() => {
-        window.scroll({ top: location, left: 0, behavior: 'smooth' });
-        backTop.setAttribute('id', 'less')
-        backTop.innerHTML = 'Back to top';
-        document.querySelector('#less').addEventListener('click', backToTop);
-    }, 600);
-}
-
-const show = document.querySelector('#more').addEventListener('click', fullScreen);
-
-const backToTop = () => {
-    let backTop = document.querySelector('#less'),
-        container = document.querySelector('#more'),
-        bg = document.querySelector('#learn-more');
-
-    backTop.textContent = 'Learn more';
-
-    bg.classList.remove('more--connect-full'),
-    bg.classList.add('more--connect');
-    container.classList.add('more');
-
-    setTimeout(() => {
-        backTop.scroll({ top: 0, left: 0, behavior: 'smooth' });
-        backTop.setAttribute('id', 'more');
-        document.querySelector('#more').addEventListener('click', fullScreen);
-    }, 1000);
-}
-
+// Event listener for clicking learn more
+const show = document.querySelector('#about').addEventListener('click', showAbout);
 
 
 

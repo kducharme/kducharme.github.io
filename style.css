@@ -23,6 +23,11 @@ body {
   margin: 0px;
 }
 
+.hide {
+  display: none;
+  transition: display 2s ease-out;
+}
+
 /* Navigation styles */
 
 nav {
@@ -51,11 +56,18 @@ nav {
   opacity: .5;
 }
 
+/* Landing section structure */
+
+.landing {
+  display: flex;
+  flex-direction: column;
+}
+
 /* Hero section styles */
 
 .hero {
-  height: 85vh;
-  padding: 0px 220px 0px 50px;
+  height: 84vh;
+  padding: 0px 200px 0px 50px;
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -78,32 +90,26 @@ nav {
   margin: none;
 }
 
-/* Cards section styles */
+/* About section => before click */
 
-.more {
-  padding: 5px 50px 0px 50px;
+.about--before {
+  display: flex;
+  justify-content: center;
   color: white;
+  padding: 0px 50px 0px 50px;
+  border-radius: 5px;
 }
 
 .more--connect {
+  height: 10vh;
+  width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   background-color: var(--primaryColor);
-  border-radius: 5px 5px 0px 0px;
-  height: 40px;
-  width: 100%;
-  padding: 15px 0px 0px 0px;
-}
-
-.more--connect-full {
-  display: flex;
-  justify-content: space-between;
-  background-color: var(--primaryColor);
-  transition: width 5s ease, height .75s ease;
-  padding: 15px 0px 0px 0px;
-  height: 100vh;
-  width: 100%;
+  transition: height .75s ease;
   color: white;
+  border-radius: 5px 5px 0px 0px;
 }
 
 .more--view-cta {
@@ -112,6 +118,11 @@ nav {
   width: 50%;
   height: 20px;
   font-size: 1em;
+}
+
+.more--view-cta:hover {
+  cursor: pointer;
+  opacity: .5;
 }
 
 .more--view-cta:hover {
@@ -132,13 +143,41 @@ nav {
   opacity: .5;
 }
 
-/* Portfolio section styles */
 
-.portfolio {
-  height: 100vh;
+/* About section => after click */
+
+.about--after {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  color: white;
+  border-radius: 5px;
 }
 
-/* Call to action section styles */
+.more--connect-full {
+  background-color: var(--primaryColor);
+  align-items: flex-start;
+  transition: height .75s ease;
+  padding: 25px 0px 0px 0px;
+  border-radius: 0px;
+  height: 100vh;
+  color: white;
+}
+
+.more--view-cta--after {
+  font-weight: var(--mediumWeight);
+  margin: 0px 0px 0px 50px;
+  width: 50%;
+  height: 5%;
+  height: 20px;
+  font-size: 1em;
+}
+
+.resume {
+  justify-content: center;
+}
+
+
+
+
+/* About section styles */
+`
