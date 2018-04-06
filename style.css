@@ -92,6 +92,11 @@ nav {
   margin: none;
 }
 
+.click {
+  font-style: italic;
+  font-weight: var(--lightWeight);
+}
+
 /* About section => before click */
 
 .about--before {
@@ -117,7 +122,7 @@ nav {
 .more--view-cta {
   font-weight: var(--mediumWeight);
   margin: 0px 0px 0px 50px;
-  width: 50%;
+  width: 10%;
   height: 20px;
   font-size: 1em;
   transition: all 2s ease;
@@ -162,41 +167,57 @@ nav {
   align-items: flex-start;
   flex-direction: column;
   transition: height .75s ease;
-  padding: 25px 0px 0px 0px;
   border-radius: 0px;
-  height: 100vh;
-  padding: 0px 50px 0px 50px;
+  padding: 25px 50px 40px 50px;
 }
 
 .resume {
-  justify-content: center;
   padding: 50px 50px 0px 50px;
+  width: 60%;
 }
 
 .more--view-cta-after {
   font-weight: var(--mediumWeight);
   margin: 30px 0px 0px 50px;
-  width: 50%;
+  width: 10%;
   height: 20px;
   font-size: .8em;
   transition: all 2s ease;
+  align-items: center;
 }
 
 .resume--head {
   font-family: var(--fontSecondary);
-  font-size: 2em;
+  font-size: 2.5em;
   margin: 0px 0px 15px 0px;
 }
 .resume--title {
   /* color: var(--accentColor); */
-  font-weight: var(--mediumWeight);
+  font-weight: var(--heavyWeight);
   padding: 24px 0px 0px 0px;
   font-size: 1em;
 }
 
 .resume--descript {
-  font-weight: var(--thinWeight);
-  line-height: 1.7;
+  font-weight: var(--lightWeight);
   font-size: 1em;
+  line-height: 1.7;
   opacity:.8;
+}
+
+.contact {
+  font-size: .8em;
+  height: 42px;
+  padding: 7px 20px 7px 20px;
+  margin: 20px 0px 0px 0px;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  background-color: #8b130d;
+  font-weight: var(--mediumWeight);
+}
+
+.contact:hover {
+  cursor: pointer;
+  background-color: #a31d16;
 }

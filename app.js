@@ -3,8 +3,9 @@ const showAbout = (e) => {
         bottomBar = document.querySelector('#learn-more'),
         socialIcons = document.querySelector('#icons'),
         viewButton = document.querySelector('#view'),
-        hideButton = document.querySelector('#back')
-    resume = document.querySelector('#resume'),
+        hideButton = document.querySelector('#back'),
+        caseStudies = document.querySelector('#case')
+        resume = document.querySelector('#resume'),
         clickLocation = e.screenY;
 
 
@@ -27,7 +28,7 @@ const showAbout = (e) => {
 };
 
 // Event listener for clicking learn more
-const show = document.querySelector('#about').addEventListener('click', showAbout);
+const show = document.querySelector('#about', '.click').addEventListener('click', showAbout);
 
 
 
