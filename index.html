@@ -6,6 +6,7 @@
     <meta name="description" content="Kyle Ducharme is a product designer and developer based in Nashville, TN building software products.">
     <meta name="viewport">
     <link href="style.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
 </head>
 
 <body>
@@ -15,7 +16,7 @@
         <div class='nav__links'>
             <a href='#' class='nav--link'>Home</a>
             <a href='blog/posts.html' class='nav--link'>Blog</a>
-            <a href='#' class='nav--link'>Contact</a>
+            <a id='navContact' class='nav--link'>Contact</a>
         </div>
     </nav>
 
@@ -53,7 +54,8 @@
                         <p class='resume--descript'>I'm a UX/UI designer and front-end developer based in Nashville that's been building products for
                             customers ranging from startups to Fortune 50 brands for more than 5 years (that also has other
                             random experiences ranging from founding & selling a coffee company to teaching ballroom dance
-                            👯).</p>
+                            👯).
+                        </p>
                     </span>
                     <span class='experience'>
                         <p class='resume--title'>Design</p>
@@ -70,7 +72,7 @@
                         <p class='resume--descript'>If you're looking for a hybrid product designer and front-end developer to join your team, I'd love
                             to chat! I'm currently open to new full-time and consulting opportunities starting July 2018.</p>
                     </span>
-                    <button class='contact'>Get in touch</button>
+                    <button class='contact--button'>Get in touch</button>
                 </div>
                 <div id='case' class='case hide'>
                     <span class='card' hide ''>
@@ -86,16 +88,39 @@
             <!-- Modal content -->
             <div class='content' id='content'>
                 <span class='content--close' id='close'>&times;</span>
-                    <p class='content--title' id='modal-title'>Well hello there.</p>
-                    <p class='content--body' id='modal-body'>It appears you're really taking the time to explore my website, which makes me think you should definitely reach out to chat. What do you think?</p>
-                    <span class='content--cta'>
-                        <button class='modal--button content--cta-button1' id='interested'>I'm convinced</button>
-                        <button class='modal--button content--cta-button2' id='notInterested'>Meh, not interested</button>
+                <p class='content--title' id='modal-title'>Well hello there.</p>
+                <p class='content--body' id='modal-body'>It appears you're really taking the time to explore my website, which makes me think you should definitely
+                    reach out to chat. What do you think?</p>
+                <span class='content--cta'>
+                    <button class='modal--button content--cta-button1' id='interested'>I'm convinced</button>
+                    <button class='modal--button content--cta-button2' id='notInterested'>Meh, not interested</button>
+                </span>
+                <span class='content--close' id='close-contact'>&times;</span>
+                <div id='contact-form' class='contact'>
+                    <p class='contact--title hide' id='contact-title'>I'd love to hear from you.</p>
+                    <p class='contact--body hide' id='contact-body'>It appears you're really taking the time to explore my website, which makes me think you should definitely
+                        reach out to chat. What do you think?</p>
+                    <span class='form hide' id='form'>
+                        <label for="fullNme">Full name</label>
+                        <input id='fullName' type="text" placeholder="Full name">
+
+                        <label for="email">E-mail address</label>
+                        <input id='email' type="text" placeholder="E-mail address">
+                        
+                        <label for="company">Company name</label>
+                        <input id = 'company' type="text" placeholder="Company">
+
+                        <label for="message">Company name</label>
+                        <textarea id='message' rows='4' placeholder="Enter message..."></textarea>
+
+                        <button class='contact--button'>Send message</button>
                     </span>
                 </div>
+
             </div>
-            
         </div>
+
+    </div>
 
     </div>
 

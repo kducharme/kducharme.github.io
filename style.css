@@ -133,7 +133,6 @@ nav {
   top: 0;
   width: 100%;
   height: 100%;
-  overflow: auto;
   margin: 0;
 }
 
@@ -142,7 +141,7 @@ nav {
   margin: auto;
   width: 100vw;
   height: 100vh;
-  transition: all 1s linear;
+  transition: all .2s linear;
 }
 
 .content--close {
@@ -238,7 +237,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   background-color: var(--primaryColor);
-  transition: height .75s ease;
+  transition: height .75s ease-out;
   color: white;
   border-radius: 5px 5px 0px 0px;
 }
@@ -329,7 +328,7 @@ nav {
   opacity:.8;
 }
 
-.contact {
+.contact--button {
   font-size: .8em;
   height: 42px;
   padding: 7px 20px 7px 20px;
@@ -341,7 +340,99 @@ nav {
   font-weight: var(--mediumWeight);
 }
 
-.contact:hover {
+.contact--button:hover {
   cursor: pointer;
   background-color: #a31d16;
+}
+
+/* Contact form */
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 100%;
+  min-width: 300px;
+}
+
+.contact--title {
+  font-weight: var(--heavyWeight);
+  color: var(--primaryColor);
+  font-size: 1.8em;
+  padding: 4% 0px 0px 0px;
+}
+
+.contact--body {
+  font-weight: var(--lightWeight);
+  color: var(--primaryColor);
+  text-align: center;
+  margin: 0% 15% 0% 15%;
+  opacity: .5;
+  line-height: 1.6;
+  font-size: 1em;
+  padding: 0px 0px 24px 0px;
+}
+
+.form {
+  height: 100%;
+  width: 50%;
+  min-width: 240px;
+  max-width: 400px;
+}
+
+.form > input, textarea {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: var(--fontPrimary);
+  font-size: 13px;
+  height: 38px;
+  width: 100%;
+  border: 1px solid #E7E7E7;
+  border-radius: 4px;
+  background-color: transparent;
+  margin: 8px 0px 15px 0px;
+  padding: 0px 0px 0px 8px;
+}
+
+.form > textarea {
+  padding: 8px 0px 0px 8px;
+  resize: none;
+}
+
+.form > input:active, input:focus, textarea:active, textarea:focus {
+  border: 1px solid var(--accentColor);
+  box-shadow:none;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -ms-transition: none;
+  -o-transition: none;
+  outline: none;
+} 
+
+.form > label {
+  font-size: 12px;
+  font-weight: var(--mediumWeight);
+  font-family: var(--fontPrimary);
+  color: var(--secondaryColor);
+}
+
+
+
+.contact--button {
+  float:right;
+  font-size: .8em;
+  height: 42px;
+  padding: 7px 20px 7px 20px;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--accentColor);
+  font-weight: var(--mediumWeight);
+}
+
+.contact--button:hover {
+  cursor: pointer;
+  background-color: rgb(27, 59, 172)
 }
