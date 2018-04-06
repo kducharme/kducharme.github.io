@@ -241,11 +241,13 @@ textarea:focus, textarea:active input:focus, input:active {
 
 .posts-body {
     margin-top: 4%;
+    display: flex;
+    justify-content: center;
 }
 
 .printedPost {
     background-color: var(--bgColor);
-    width: 100%;
+    width: 80%;
     margin: 0px 0px 60px 0px;
 }
 

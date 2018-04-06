@@ -40,21 +40,47 @@ const showModal = () => {
 // Event listener for showing modal after clicking 'click'
 const click = document.querySelector('#click').addEventListener('click', showModal);
 
+// Displays modal when user clicks 'interested' in modal
+const expandModal = () => {
+    let modal = document.querySelector('#modal'),
+        container = document.querySelector('#content'),
+        buttonOne = document.querySelector('#interested'),
+        buttonTwo = document.querySelector('#notInterested'),
+        modalTitle = document.querySelector('#modal-title'),
+        modalBody = document.querySelector('#modal-body'),
+        close = document.querySelector('#close');
+
+    close.classList.add('hide');
+    buttonOne.classList.add('hide');
+    buttonTwo.classList.add('hide');
+    modalTitle.classList.add('hide');
+    modalBody.classList.add('hide');
+    container.classList.add('content--after');
+    container.classList.remove('content');
+    modal.classList.remove('modal');
+    modal.classList.add('modal--after');
+}
+
+// Event listener for showing contact form
+const expand = document.querySelector('#interested').addEventListener('click', expandModal);
+
 const hideModal = () => {
     let modal = document.querySelector('#modal'),
     close = document.querySelector('#close'); 
     modal.classList.add('hide');
 }
 
-// Event listener for closing modal
+// Event listeners for closing modal
 const close = document.querySelector('#close').addEventListener('click', hideModal);
+
+const notInterested = document.querySelector('#notInterested').addEventListener('click', hideModal);
 
 const rotateEmoji = () => {
     let emoji = document.querySelector('#emoji'),
         allEmojis = ['👯', '🤓', '🕺🏻', '🙋‍♂️', '🤘🏻', '🤸🏻‍', '👨‍💻', '🤾🏻‍♂️'],
         showEmoji, i = 0;
 
-    let timer = setInterval((timer) => {
+    let timer = setInterval(() => {
         if (allEmojis.length == i) {
             i = 0;
         }
@@ -63,7 +89,7 @@ const rotateEmoji = () => {
             emoji.textContent = showEmoji;
             i++;
         }
-    }, 4000);
+    }, 2000);
 }
 
 const rotate = window.addEventListener('load', rotateEmoji);

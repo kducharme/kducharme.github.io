@@ -81,12 +81,18 @@
         </div>
 
         <!-- Modal structure -->
-        <div id="modal" class="modal hide">
+        <div id='modal' class='modal hide'>
 
             <!-- Modal content -->
-            <div class="modal-content">
-                <span class="close" id='close'>&times;</span>
-                <p>Some text in the Modal..</p>
+            <div class='content' id='content'>
+                <span class='content--close' id='close'>&times;</span>
+                    <p class='content--title' id='modal-title'>Well hello there.</p>
+                    <p class='content--body' id='modal-body'>It appears you're really taking the time to explore my website, which makes me think you should definitely reach out to chat. What do you think?</p>
+                    <span class='content--cta'>
+                        <button class='modal--button content--cta-button1' id='interested'>I'm convinced</button>
+                        <button class='modal--button content--cta-button2' id='notInterested'>Meh, not interested</button>
+                    </span>
+                </div>
             </div>
             
         </div>
