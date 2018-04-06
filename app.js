@@ -38,25 +38,19 @@ const click = document.querySelector('#click').addEventListener('click', clickHe
 
 const rotateEmoji = () => {
     let emoji = document.querySelector('#emoji'),
-        allEmojis = ['♥️', '🕺🏻', '👨🏻‍🎤', '🤘🏻', '🤸🏻‍'],
-        showEmoji;
+        allEmojis = ['👯', '🤓', '🕺🏻', '🙋‍♂️', '🤘🏻', '🤸🏻‍'],
+        showEmoji, i = 0;
 
-    for (let i = 0; i < allEmojis.length; i++) {
-        setInterval(() => {
+    setInterval(() => {
+        if (allEmojis.length == i) {
+            i = 0;
+        }
+        else {
             showEmoji = allEmojis[i];
-            emoji.innerHTML = showEmoji;
-        }, 5000);
-    }
+            emoji.textContent = showEmoji;
+            i++;
+        }
+    }, 4000);
 }
 
-
-
 const rotate = window.addEventListener('load', rotateEmoji, false);
-
-
-
-
-
-
-
-
