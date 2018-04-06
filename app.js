@@ -31,17 +31,30 @@ const showAbout = (e) => {
 const show = document.querySelector('#about').addEventListener('click', showAbout);
 
 // Displays modal when user clicks 'click' on hero image
-const clickHero = () => alert('ha');
+const showModal = () => {
+    let modal = document.querySelector('#modal'),
+        close = document.querySelector('#close');
+    modal.classList.remove('hide');
+}
 
-// Event listener for clicking 'click'
-const click = document.querySelector('#click').addEventListener('click', clickHero);
+// Event listener for showing modal after clicking 'click'
+const click = document.querySelector('#click').addEventListener('click', showModal);
+
+const hideModal = () => {
+    let modal = document.querySelector('#modal'),
+    close = document.querySelector('#close'); 
+    modal.classList.add('hide');
+}
+
+// Event listener for closing modal
+const close = document.querySelector('#close').addEventListener('click', hideModal);
 
 const rotateEmoji = () => {
     let emoji = document.querySelector('#emoji'),
-        allEmojis = ['👯', '🤓', '🕺🏻', '🙋‍♂️', '🤘🏻', '🤸🏻‍'],
+        allEmojis = ['👯', '🤓', '🕺🏻', '🙋‍♂️', '🤘🏻', '🤸🏻‍', '👨‍💻', '🤾🏻‍♂️'],
         showEmoji, i = 0;
 
-    setInterval(() => {
+    let timer = setInterval((timer) => {
         if (allEmojis.length == i) {
             i = 0;
         }
@@ -53,4 +66,4 @@ const rotateEmoji = () => {
     }, 4000);
 }
 
-const rotate = window.addEventListener('load', rotateEmoji, false);
+const rotate = window.addEventListener('load', rotateEmoji);
