@@ -97,6 +97,10 @@ nav {
   font-weight: var(--lightWeight);
 }
 
+.click:hover {
+  cursor: pointer;
+}
+
 /* About section => before click */
 
 .about--before {
