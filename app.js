@@ -1,4 +1,22 @@
-const body = document.getElementsByTagName('body');
+// Rotates emojis in hero text on loading
+const rotateEmoji = () => {
+    let emoji = document.querySelector('#emoji'),
+        allEmojis = ['👯', '🤓', '🕺🏻', '🙋‍♂️', '🤘🏻', '🤸🏻‍', '👨‍💻', '🤾🏻‍♂️'],
+        showEmoji, i = 0;
+
+    let timer = setInterval(() => {
+        if (allEmojis.length == i) {
+            i = 0;
+        }
+        else {
+            showEmoji = allEmojis[i];
+            emoji.textContent = showEmoji;
+            i++;
+        }
+    }, 2000);
+}
+
+const rotate = window.addEventListener('load', rotateEmoji);
 
 // User clicks 'learn more' and the about section becomes full screen
 const showAbout = (e) => {
@@ -87,9 +105,9 @@ const showContact = () => {
     form.classList.remove('hide');
     contactTitle.classList.remove('hide');
     contactBody.classList.remove('hide');
-    console.log('success')
 }
 
+// Event listener for clicking 'contact' in primary nav
 const contactNav = document.querySelector('#navContact').addEventListener('click', showContact)
 
 const hideModal = () => {
@@ -100,24 +118,18 @@ const hideModal = () => {
 
 // Event listeners for closing modal
 const close = document.querySelector('#close').addEventListener('click', hideModal);
-
 const notInterested = document.querySelector('#notInterested').addEventListener('click', hideModal);
 
-const rotateEmoji = () => {
-    let emoji = document.querySelector('#emoji'),
-        allEmojis = ['👯', '🤓', '🕺🏻', '🙋‍♂️', '🤘🏻', '🤸🏻‍', '👨‍💻', '🤾🏻‍♂️'],
-        showEmoji, i = 0;
+const sendForm = () => {
+    let fullName = document.querySelector('#fullName').value,
+        email = document.querySelector('#email').value,
+        company = document.querySelector('#company').value,
+        message = document.querySelector('#message').value;
 
-    let timer = setInterval(() => {
-        if (allEmojis.length == i) {
-            i = 0;
-        }
-        else {
-            showEmoji = allEmojis[i];
-            emoji.textContent = showEmoji;
-            i++;
-        }
-    }, 2000);
+    let name = fullName.split(' '),
+        firstName = name[0],
+        lastName = name[1];
 }
 
-const rotate = window.addEventListener('load', rotateEmoji);
+// Event listener for submitting form
+const submitForm = document.querySelector('#submit').addEventListener('click', sendForm);
