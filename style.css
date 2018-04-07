@@ -4,6 +4,7 @@
   --primaryColor: #1D2936;
   --secondaryColor: #b3b3b1;
   --accentColor: #3B60E4;
+  --lightColor: #fff;
   --heavyWeight: 800;
   --mediumWeight: 600;
   --lightWeight: 400;
@@ -29,6 +30,11 @@ body {
 .hide {
   display: none;
   transition: display 2s ease-out;
+}
+
+button {
+  height: 42px;
+  padding: 7px 20px 7px 20px;
 }
 
 button:hover, button:active {
@@ -196,7 +202,7 @@ nav {
 
 .content--cta-button1 {
   background-color: var(--accentColor);
-  color: white;
+  color: var(--lightColor);
   border: none;
 }
 
@@ -218,27 +224,28 @@ nav {
 /* About section => before click */
 
 .about--before {
+  color: var(--lightColor);
   display: flex;
   justify-content: center;
-  color: white;
   padding: 0px 50px 0px 50px;
   border-radius: 5px;
 }
 
 .more--connect {
+  background-color: var(--primaryColor);
+  color: var(--lightColor);
   height: 10vh;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--primaryColor);
   transition: height .75s ease-out;
-  color: white;
   border-radius: 5px 5px 0px 0px;
 }
 
 .more--view-cta {
   font-weight: var(--mediumWeight);
+  color: var(--lightColor);
   margin: 0px 0px 0px 50px;
   width: 15%;
   height: 20px;
@@ -246,8 +253,9 @@ nav {
   transition: all 2s ease;
 }
 
-.more--view-cta:hover {
+.more--view-cta:hover, .more--view-cta-after:hover {
   opacity: .5;
+  cursor: pointer;
 }
 
 .more--icons {
@@ -269,7 +277,7 @@ nav {
 .about--after {
   display: flex;
   flex-direction: column;
-  color: white;
+  color: var(--lightColor);
   border-radius: 5px;
   height: 100vh;
 }
@@ -284,8 +292,9 @@ nav {
 }
 
 .resume {
-  padding: 50px 50px 0px 50px;
-  width: 60%;
+  padding: 50px 0px 0px 50px;
+  width: 100%;
+  min-width: 300px;
 }
 
 .more--view-cta-after {
@@ -299,37 +308,38 @@ nav {
 }
 
 .resume--head {
+  color: var(--lightColor);
   font-family: var(--fontSecondary);
   font-size: 2.5em;
   margin: 0px 0px 15px 0px;
 }
 .resume--title {
-  /* color: var(--accentColor); */
+  color: var(--lightColor);
   font-weight: var(--heavyWeight);
   padding: 24px 0px 0px 0px;
   font-size: 1em;
 }
 
 .resume--descript {
+  color: var(--lightColor);
   font-weight: var(--lightWeight);
   font-size: 1em;
   line-height: 1.7;
   opacity:.8;
+  width: 80%;
 }
 
-.contact--button {
+.resume--button {
   font-size: .8em;
-  height: 42px;
-  padding: 7px 20px 7px 20px;
   margin: 20px 0px 0px 0px;
-  color: white;
+  color: var(--lightColor);
   border: none;
   border-radius: 4px;
   background-color: #8b130d;
   font-weight: var(--mediumWeight);
 }
 
-.contact--button:hover {
+.resume--button:hover {
   background-color: #a31d16;
 }
 
@@ -348,12 +358,16 @@ nav {
   font-weight: var(--heavyWeight);
   font-size: 1.8em;
   padding: 4% 0px 0px 0px;
+  text-align: center;
+  min-width: 240px;
+  line-height: 1.6;
 }
 
 .contact--body {
   font-weight: var(--lightWeight);
   text-align: center;
-  margin: 0% 15% 0% 15%;
+  width: 70%;
+  min-width: 240px;
   opacity: .5;
   line-height: 1.6;
   font-size: 1em;
@@ -389,7 +403,6 @@ nav {
 
 .form > input:active, input:focus, textarea:active, textarea:focus {
   border: 1px solid var(--accentColor);
-  box-shadow:none;
 } 
 
 .form > label {
@@ -398,18 +411,14 @@ nav {
   color: var(--secondaryColor);
 }
 
-
-
 .contact--button {
-  float:right;
-  font-size: .8em;
-  height: 42px;
-  padding: 7px 20px 7px 20px;
-  color: white;
-  border: none;
-  border-radius: 4px;
   background-color: var(--accentColor);
   font-weight: var(--mediumWeight);
+  color: var(--lightColor);
+  float:right;
+  font-size: .8em;
+  border: none;
+  border-radius: 4px;
 }
 
 .contact--button:hover {
