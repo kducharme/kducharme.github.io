@@ -16,8 +16,9 @@
 
 /* Global styles */
 
-h1, h2, h3, h4, h5, h6, p, a {
+h1, h2, h3, h4, h5, h6, p, a, label {
   font-family: var(--fontPrimary);
+  color: var(--primaryColor);
 }
 
 body {
@@ -28,6 +29,15 @@ body {
 .hide {
   display: none;
   transition: display 2s ease-out;
+}
+
+button:hover, button:active {
+  cursor: pointer;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -ms-transition: none;
+  -o-transition: none;
+  outline: none;
 }
 
 /* Navigation styles */
@@ -49,7 +59,6 @@ nav {
 
 .nav--link {
   margin: 0px 50px 0px 10px;
-  color: var(--primaryColor);
   text-decoration: none;
   font-size: 13px;
 }
@@ -77,7 +86,6 @@ nav {
 }
 
 .hero--h1 {
-  color: var(--primaryColor);
   font-weight: var(--heavyWeight);
   line-height: 1.5;
   font-size: 3em;
@@ -97,10 +105,12 @@ nav {
 .click {
   font-style: italic;
   font-weight: var(--lightWeight);
+  color: var(--accentColor);
 }
 
 .click:hover {
   cursor: pointer;
+  color: rgb(37, 73, 202);
 }
 
 .modal {
@@ -153,19 +163,16 @@ nav {
 
 .content--close:hover, .content--close:focus {
   color: #000;
-  cursor: pointer;
 }
 
 .content--title {
   font-weight: var(--heavyWeight);
-  color: var(--primaryColor);
   font-size: 1.3em;
   padding: 10px 0px 0px 0px;
 }
 
 .content--body {
   font-weight: var(--lightWeight);
-  color: var(--primaryColor);
   opacity: .5;
   line-height: 1.6;
   font-size: 1em;
@@ -193,19 +200,8 @@ nav {
   border: none;
 }
 
-.modal--button:active, .modal--button:focus {
-  box-shadow:none;
-  -webkit-transition: none;
-  -moz-transition: none;
-  -ms-transition: none;
-  -o-transition: none;
-  outline: none;
-}
-
 .content--cta-button1:hover {
   background-color: #284AC7;
-  cursor: pointer;
-
 }
 
 .content--cta-button2 {
@@ -217,7 +213,6 @@ nav {
 
 .content--cta-button2:hover {
   color: rgb(27, 59, 172);
-  cursor: pointer;
 }
 
 /* About section => before click */
@@ -252,12 +247,6 @@ nav {
 }
 
 .more--view-cta:hover {
-  cursor: pointer;
-  opacity: .5;
-}
-
-.more--view-cta:hover {
-  cursor: pointer;
   opacity: .5;
 }
 
@@ -341,7 +330,6 @@ nav {
 }
 
 .contact--button:hover {
-  cursor: pointer;
   background-color: #a31d16;
 }
 
@@ -358,14 +346,12 @@ nav {
 
 .contact--title {
   font-weight: var(--heavyWeight);
-  color: var(--primaryColor);
   font-size: 1.8em;
   padding: 4% 0px 0px 0px;
 }
 
 .contact--body {
   font-weight: var(--lightWeight);
-  color: var(--primaryColor);
   text-align: center;
   margin: 0% 15% 0% 15%;
   opacity: .5;
@@ -404,17 +390,11 @@ nav {
 .form > input:active, input:focus, textarea:active, textarea:focus {
   border: 1px solid var(--accentColor);
   box-shadow:none;
-  -webkit-transition: none;
-  -moz-transition: none;
-  -ms-transition: none;
-  -o-transition: none;
-  outline: none;
 } 
 
 .form > label {
   font-size: 12px;
   font-weight: var(--mediumWeight);
-  font-family: var(--fontPrimary);
   color: var(--secondaryColor);
 }
 
@@ -433,6 +413,5 @@ nav {
 }
 
 .contact--button:hover {
-  cursor: pointer;
   background-color: rgb(27, 59, 172)
 }
