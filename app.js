@@ -19,7 +19,7 @@ const rotateEmoji = () => {
 const rotate = window.addEventListener('load', rotateEmoji);
 
 // User clicks 'learn more' and the about section becomes full screen
-const showAbout = (e) => {
+const learnMore = (e) => {
     let aboutContainer = document.querySelector('#about'),
         bottomBar = document.querySelector('#learn-more'),
         socialIcons = document.querySelector('#icons'),
@@ -34,19 +34,47 @@ const showAbout = (e) => {
     bottomBar.classList.add('more--connect-full');
 
     setTimeout(() => {
+        resume.classList.remove('hide');
         bottomBar.classList.remove('more--connect');
         aboutContainer.classList.add('about--after');
         window.scroll({ top: clickLocation, left: 0, behavior: 'smooth' });
-        resume.classList.remove('hide');
     }, 600)
-
+    
     viewButton.classList.add('hide');
     hideButton.classList.remove('hide')
     hideButton.classList.add('more--view-cta-after');
 };
 
 // Event listener for clicking 'learn more'
-const show = document.querySelector('#about').addEventListener('click', showAbout);
+const learn = document.querySelector('#view').addEventListener('click', learnMore);
+
+const backToTop = () => {
+    let aboutContainer = document.querySelector('#about'),
+    bottomBar = document.querySelector('#learn-more'),
+    socialIcons = document.querySelector('#icons'),
+    viewButton = document.querySelector('#view'),
+    hideButton = document.querySelector('#back'),
+    caseStudies = document.querySelector('#case'),
+    resume = document.querySelector('#resume');
+
+    window.scroll({ top: 0, left: 0, behavior: 'smooth' });
+    
+    setTimeout(() => {
+        bottomBar.classList.add('more--connect');
+        socialIcons.classList.remove('hide');
+        aboutContainer.classList.add('more', 'about--before');
+        bottomBar.classList.remove('more--connect-full');
+        resume.classList.add('hide');
+    }, 600)
+    
+    viewButton.classList.remove('hide');
+    hideButton.classList.add('hide')
+    hideButton.classList.remove('more--view-cta-after');
+    aboutContainer.classList.remove('about--after');
+}
+
+const back = document.querySelector('#back').addEventListener('click', backToTop);
+
 
 // Displays modal when user clicks 'click' on hero image
 const showModal = () => {
@@ -94,6 +122,7 @@ const expandModal = () => {
 // Event listener for showing contact form
 const expand = document.querySelector('#interested').addEventListener('click', expandModal);
 
+// Contact form appears after user clicks 'interested'
 const showContact = () => {
     let contact = document.querySelector('#contact-form'),
         form = document.querySelector('#form'),

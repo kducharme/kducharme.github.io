@@ -250,7 +250,7 @@ nav {
   width: 15%;
   height: 20px;
   font-size: 1em;
-  transition: all 2s ease;
+  transition: all .5s ease;
 }
 
 .more--view-cta:hover, .more--view-cta-after:hover {
@@ -286,7 +286,7 @@ nav {
   background-color: var(--primaryColor);
   align-items: flex-start;
   flex-direction: column;
-  transition: height .75s ease;
+  transition: height .75s ease-out;
   border-radius: 0px;
   padding: 25px 50px 40px 50px;
 }
@@ -335,12 +335,12 @@ nav {
   color: var(--lightColor);
   border: none;
   border-radius: 4px;
-  background-color: #8b130d;
+  background-color: var(--accentColor);
   font-weight: var(--mediumWeight);
 }
 
 .resume--button:hover {
-  background-color: #a31d16;
+  background-color: rgb(27, 59, 172);
 }
 
 /* Contact form */
@@ -422,5 +422,5 @@ nav {
 }
 
 .contact--button:hover {
-  background-color: rgb(27, 59, 172)
+  background-color: rgb(27, 59, 172);
 }
