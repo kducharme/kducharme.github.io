@@ -27,6 +27,7 @@ const aspClick = document.querySelector('#asp').addEventListener('click', scroll
 const splitsecndClick = document.querySelector('#splitsecnd').addEventListener('click', scrollToSplit);
 const edgenetClick = document.querySelector('#edgenet').addEventListener('click', scrollToEdge);
 
+let imgCount = 1;
 
 const lightBox = (e) => {
     let imageId = e.target.id,
@@ -35,7 +36,7 @@ const lightBox = (e) => {
         clickedImage,
         preview;
 
-    if (lightboxContent.childNodes.length == 1) {
+    if (lightboxContent.childNodes.length == imgCount) {
         if (e.srcElement.nodeName === 'IMG') {
             imageURL = e.target.src;
             lightboxModal.classList.remove('hide');
@@ -45,6 +46,7 @@ const lightBox = (e) => {
             preview.classList.add('modal--image')
 
             lightboxContent.appendChild(preview);
+            console.log(lightboxContent)
         }
     }
 }
@@ -57,6 +59,8 @@ const hideModal = () => {
     lightboxContent = document.querySelector('#content'),
     close = document.querySelector('#closeLight'); 
     lightboxModal.classList.add('hide');
+
+    lightboxContent.removeChild(lightboxContent.childNodes[0, 1])
 }
 
 // Event listeners for closing modal

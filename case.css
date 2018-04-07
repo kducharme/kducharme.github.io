@@ -194,7 +194,7 @@
 .modal {
   position: fixed;
   z-index: 1;
-  padding-top: 100px;
+
   left: 0;
   top: 0;
   width: 100%;
@@ -206,24 +206,29 @@
 
 .content {
   background-color: var(--bgColor);
+  margin-top: 100px;
   border-radius: 4px;
   margin: auto;
   width: 80%;
 }
 
 .modal--image {
+  margin-top: 100px;
   display: flex;
   width: 100%;
 }
 
 .content--close {
-  color: #aaaaaa;
+  color:white;
   float: right;
+  margin: 2% 3% 0px 0px;
+  top: 20px;
   font-size: 28px;
   font-weight: var(--mediumWeight);
 }
 
 .content--close:hover, .content--close:focus {
-  color: #000;
+  opacity: .7;
+  cursor: pointer;
 }
   
