@@ -17,7 +17,7 @@
   
   /* Global styles */
   
-  h1, h2, h3, h4, h5, h6, p, a, label {
+  h1, h2, h3, h4, h5, h6, p, a, label, li {
     font-family: var(--fontPrimary);
     color: var(--primaryColor);
   }
@@ -98,7 +98,7 @@
     line-height: 1.5;
     font-size: 3em;
     margin: 0px;
-    padding: 5% 0 5% 0;
+    padding: 5% 0 7% 0;
 }
 
 .case--body {
@@ -155,12 +155,24 @@
     margin: 0px;
 }
 
-.study--body {
+.study--body, .study--full > ul {
     color: var(--primaryColor);
     font-weight: var(--lightWeight);
     font-size: 1em;
     line-height: 1.7;
     opacity: .7;
+}
+
+.study--full > ul > li {
+  padding-bottom: 15px;
+}
+
+.study--full > ul > li:last-child {
+  padding-bottom: 0px;
+}
+
+.study--full > ul > li > span {
+  font-weight: var(--heavyWeight);
 }
 
 

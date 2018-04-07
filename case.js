@@ -16,7 +16,15 @@ const scrollToEdge = () => {
     window.scroll({ top: location.top - 30, left: 0, behavior: 'smooth' });
 }
 
+// Scrolls to asp section
+const scrollToASP = () => {
+    const asp = document.querySelector('#aspStudy'),          location = asp.getBoundingClientRect();
+    window.scroll({ top: location.top - 30, left: 0, behavior: 'smooth' });
+}
+
 const wavefireClick = document.querySelector('#wavefire').addEventListener('click', scrollToWave);
+
+const aspClick = document.querySelector('#asp').addEventListener('click', scrollToASP);
 
 const splitsecndClick = document.querySelector('#splitsecnd').addEventListener('click', scrollToSplit);
 
