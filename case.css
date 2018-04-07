@@ -155,7 +155,7 @@
     margin: 0px;
 }
 
-.study--body, .study--full > ul {
+.study--body, .study--full > ul, .visuals > p {
     color: var(--primaryColor);
     font-weight: var(--lightWeight);
     font-size: 1em;
@@ -173,6 +173,24 @@
 
 .study--full > ul > li > span {
   font-weight: var(--heavyWeight);
+}
+
+.visuals {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.visuals > p {
+  margin-bottom: 50px;
+}
+
+.visuals > img {
+  height: 350px;
+  width: auto;
+  box-shadow: 0px 0px 10px 0 rgba(0,0,0,0.10);
+  border-radius: 10px;
 }
 
 
