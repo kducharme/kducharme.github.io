@@ -32,6 +32,8 @@ const learnMore = (e) => {
     aboutContainer.classList.remove('more', 'about--before');
     socialIcons.classList.add('hide');
     bottomBar.classList.add('more--connect-full');
+    viewButton.classList.add('hide');
+    hideButton.classList.remove('hide')
 
     setTimeout(() => {
         resume.classList.remove('hide');
@@ -40,8 +42,6 @@ const learnMore = (e) => {
         window.scroll({ top: clickLocation, left: 0, behavior: 'smooth' });
     }, 600)
     
-    viewButton.classList.add('hide');
-    hideButton.classList.remove('hide')
     hideButton.classList.add('more--view-cta-after');
 };
 
@@ -65,10 +65,10 @@ const backToTop = () => {
         aboutContainer.classList.add('more', 'about--before');
         bottomBar.classList.remove('more--connect-full');
         resume.classList.add('hide');
+        hideButton.classList.add('hide')
+        viewButton.classList.remove('hide');
     }, 600)
     
-    viewButton.classList.remove('hide');
-    hideButton.classList.add('hide')
     hideButton.classList.remove('more--view-cta-after');
     aboutContainer.classList.remove('about--after');
 }
