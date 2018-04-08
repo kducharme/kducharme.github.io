@@ -176,6 +176,7 @@ nav {
 
 .content--close:hover, .content--close:focus {
   color: #000;
+  cursor: pointer;
 }
 
 .content--title {
