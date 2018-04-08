@@ -39,7 +39,7 @@ const learnMore = (e) => {
         resume.classList.remove('hide');
         bottomBar.classList.remove('more--connect');
         aboutContainer.classList.add('about--after');
-        window.scroll({ top: clickLocation, left: 0, behavior: 'smooth' });
+        window.scroll({ top: clickLocation - 30, left: 0, behavior: 'smooth' });
     }, 600)
     
     hideButton.classList.add('more--view-cta-after');
