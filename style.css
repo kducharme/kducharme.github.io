@@ -295,7 +295,7 @@ nav {
   flex-direction: column;
   transition: height .75s ease-out;
   border-radius: 0px;
-  padding: 25px 50px 40px 50px;
+  padding: 25px 50px 7% 50px;
 }
 
 .resume {
