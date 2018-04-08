@@ -57,7 +57,7 @@ nav {
 }
 
 .nav--logo {
-  font-weight: var(--heavyWeight);
+  font-weight: var(--mediumWeight);
   color: var(--secondaryColor);
   font-size: 13px;
   width: 30%;

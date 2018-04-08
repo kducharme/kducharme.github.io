@@ -62,7 +62,7 @@ function printPosts(filteredPosts) {
     for (var i = 0; i < allPosts.length; i++) {
         let indivPost = posts[i]
         console.log(indivPost)
-        printedPosts += `<div class="printedPost">
+        printedPosts += `<div class="printed--post">
         <p class="post-title">${indivPost.title}<span class="post-date">${indivPost.date}</span></p>
         <p class="post-content">${indivPost.content}</p></div>`;
     }
