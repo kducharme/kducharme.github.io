@@ -232,7 +232,7 @@
   cursor: pointer;
 }
   
-@media (min-width:320px)  { 
+@media (max-width:320px)  { 
   nav {
     height: 40px;
     padding: 6% 4% 4% 7%;
