@@ -63,5 +63,18 @@ const hideModal = () => {
 
 // Event listeners for closing modal
 const closeLight = document.querySelector('#closeLight').addEventListener('click', hideModal);
-const closeLightBox = document.querySelector('#lightboxb').addEventListener('click', hideModal);
+// const closeLightBox = document.querySelector('#lightboxb').addEventListener('click', hideModal);
+
+const responsiveMenu = () => {
+    let navStructure = document.getElementById("topNav"),
+        mobileNav = 
+    
+    if (x.className === "topnav") {
+        x.className += " display-nav";
+    } else {
+        x.className = "topnav";
+    }
+}
+
+const hamburger = document.querySelector('#menu').addEventListener('click', responsiveMenu);
 
