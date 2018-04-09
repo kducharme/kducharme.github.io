@@ -207,6 +207,7 @@
 .content {
   margin-top: 5%;
   border-radius: 4px;
+  width: 100%;
 }
 
 .modal--image {
@@ -231,3 +232,51 @@
   cursor: pointer;
 }
   
+@media (min-width:320px)  { 
+  nav {
+    height: 40px;
+    padding: 6% 4% 4% 7%;
+  }
+
+  .nav--logo {
+    font-size: 2em;
+    width: 30%;
+  }
+  
+  .nav--link {
+    display: none;
+  }
+
+  .case {
+    width: 100%;
+  }
+
+  .case--body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 2% 4% 2% 4%;
+  }
+  
+  .case--nav {
+    display: none;
+  }
+  
+  .case--header {
+    font-size: 4em;
+    padding: 7% 0 3% 4%;
+}
+
+.study--title {
+  padding: 10px 0px 10px 0px;
+}
+
+.study--subtitle {
+  padding: 10px 0px 10px 0px;
+}
+
+  .study {
+    width: 95%;
+  }
+
+}
