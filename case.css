@@ -20,6 +20,7 @@
   h1, h2, h3, h4, h5, h6, p, a, label, li {
     font-family: var(--fontPrimary);
     color: var(--primaryColor);
+    text-decoration: none;
   }
   
   body {
@@ -62,11 +63,15 @@
     font-size: 13px;
     width: 30%;
   }
+
+  .nav--logo:hover {
+    cursor: pointer;
+    opacity: .6;
+  }
   
   .nav--link {
     margin: 0px 50px 0px 10px;
     opacity: .8;
-    text-decoration: none;
     font-size: 13px;
   }
   
@@ -232,15 +237,15 @@
   cursor: pointer;
 }
   
-@media (max-width:320px)  { 
+@media (max-width: 500px)  { 
   nav {
     height: 40px;
     padding: 6% 4% 4% 7%;
   }
 
   .nav--logo {
-    font-size: 2em;
-    width: 30%;
+    font-size: 16px;
+    width: 100%;
   }
   
   .nav--link {
@@ -248,28 +253,40 @@
   }
 
   .case {
-    width: 100%;
+    padding: 0 20px 0 20px;
   }
 
-  .case--body {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding: 2% 4% 2% 4%;
-  }
-  
-  .case--nav {
-    display: none;
-  }
-  
   .case--header {
-    font-size: 4em;
+    font-size: 2em;
     padding: 7% 0 3% 4%;
 }
 
 .study--title {
   padding: 10px 0px 10px 0px;
+  font-size: 1.3em;
 }
+  .case--body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 2% 4% 2% 4%;
+    font-size: .9em;
+  }
+  
+  .case--nav {
+    display: none;
+  }
+
+  .visuals {
+    margin: 0;
+  }
+  
+  .visuals > img {
+    width: 100%;
+    margin: 0 0 15px 0;
+    box-shadow: 0px 0px 10px 0 rgba(0,0,0,0.10);
+    border-radius: 5px;
+  }
 
 .study--subtitle {
   padding: 10px 0px 10px 0px;
