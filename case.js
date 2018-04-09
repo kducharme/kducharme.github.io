@@ -1,24 +1,29 @@
 // Scrolls to wavefire case study
 const scrollToWave = () => {
-    const wavefire = document.querySelector('#wavefireStudy'), location = wavefire.getBoundingClientRect();
+    const wavefire = document.querySelector('#wavefireStudy'),
+        location = wavefire.getBoundingClientRect();
     window.scroll({ top: location.top - 30, left: 0, behavior: 'smooth' });
 }
 
 // Scrolls to splitsecnd case study
 const scrollToSplit = () => {
-    const splitsecnd = document.querySelector('#splitsecndStudy'), location = splitsecnd.getBoundingClientRect();
+    const splitsecnd = document.querySelector('#splitsecndStudy'), 
+        location = splitsecnd.getBoundingClientRect();
+
     window.scroll({ top: location.top - 30, left: 0, behavior: 'smooth' });
 }
 
 // Scrolls to edgenet section
 const scrollToEdge = () => {
-    const edgenet = document.querySelector('#edgenetStudy'), location = edgenet.getBoundingClientRect();
+    const edgenet = document.querySelector('#edgenetStudy'),
+        location = edgenet.getBoundingClientRect();
     window.scroll({ top: location.top - 30, left: 0, behavior: 'smooth' });
 }
 
 // Scrolls to asp section
 const scrollToASP = () => {
-    const asp = document.querySelector('#aspStudy'), location = asp.getBoundingClientRect();
+    const asp = document.querySelector('#aspStudy'),
+        location = asp.getBoundingClientRect();
     window.scroll({ top: location.top - 30, left: 0, behavior: 'smooth' });
 }
 
@@ -66,15 +71,11 @@ const closeLight = document.querySelector('#closeLight').addEventListener('click
 // const closeLightBox = document.querySelector('#lightboxb').addEventListener('click', hideModal);
 
 const responsiveMenu = () => {
-    let navStructure = document.getElementById("topNav"),
-        mobileNav = 
+    let navStructure = document.querySelector('#topNav'),
+        navLinks = document.querySelector('.nav__links';
     
-    if (x.className === "topnav") {
-        x.className += " display-nav";
-    } else {
-        x.className = "topnav";
+
     }
-}
 
 const hamburger = document.querySelector('#menu').addEventListener('click', responsiveMenu);
 

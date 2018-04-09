@@ -65,7 +65,7 @@
   }
 
   .nav--logo-img {
-    width: 50px;
+    width: 40px;
   }
 
   nav a.icon {
@@ -260,20 +260,26 @@
     overflow: hidden;
   }
 
-  .topnav {
+  .nav--logo-img {
+    height: 35px;
+    width: auto;
   }
 
-  .nav--logo {
-    height: 20px;
-  }
   nav .icon {
     color: var(--primaryColor);
     font-size: 1.3em;
   }
   
-  nav .nav__links {
+  .nav__links {
   display: none;
   }
+
+  .nav--column {
+    display: flex;
+    
+  } 
+
+
   
   nav a.icon {
     float: right;
