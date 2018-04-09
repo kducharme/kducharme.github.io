@@ -1,36 +1,22 @@
 // Scrolls to wavefire case study
-const scrollToWave = () => {
-    const wavefire = document.querySelector('#wavefireStudy'),
-        location = wavefire.getBoundingClientRect();
-    window.scroll({ top: location.top - 30, left: 0, behavior: 'smooth' });
+const jumpTo = (e) => {
+    const sectionClicked = e.target.id;
+    let location = 0;
+
+    let jobs = {
+        'wavefire': '#wavefireStudy',
+        'splitsecnd': '#splitsecndStudy',
+        'edgenet': '#edgenetStudy',
+        'asp': '#aspStudy'
+    }
+
+    location = document.querySelector(jobs[e.target.id]).getBoundingClientRect();
+    
+    window.scroll({ top: location.top, left: 0, behavior: 'smooth' });
 }
 
-// Scrolls to splitsecnd case study
-const scrollToSplit = () => {
-    const splitsecnd = document.querySelector('#splitsecndStudy'), 
-        location = splitsecnd.getBoundingClientRect();
+const jumpToLink = document.querySelector('#side-nav').addEventListener('click', jumpTo)
 
-    window.scroll({ top: location.top - 30, left: 0, behavior: 'smooth' });
-}
-
-// Scrolls to edgenet section
-const scrollToEdge = () => {
-    const edgenet = document.querySelector('#edgenetStudy'),
-        location = edgenet.getBoundingClientRect();
-    window.scroll({ top: location.top - 30, left: 0, behavior: 'smooth' });
-}
-
-// Scrolls to asp section
-const scrollToASP = () => {
-    const asp = document.querySelector('#aspStudy'),
-        location = asp.getBoundingClientRect();
-    window.scroll({ top: location.top - 30, left: 0, behavior: 'smooth' });
-}
-
-const wavefireClick = document.querySelector('#wavefire').addEventListener('click', scrollToWave);
-const aspClick = document.querySelector('#asp').addEventListener('click', scrollToASP);
-const splitsecndClick = document.querySelector('#splitsecnd').addEventListener('click', scrollToSplit);
-const edgenetClick = document.querySelector('#edgenet').addEventListener('click', scrollToEdge);
 
 const lightBox = (e) => {
     let imageId = e.target.id,
@@ -71,9 +57,12 @@ const closeLight = document.querySelector('#closeLight').addEventListener('click
 // const closeLightBox = document.querySelector('#lightboxb').addEventListener('click', hideModal);
 
 const responsiveMenu = () => {
-    let navStructure = document.querySelector('#topNav'),
-        navLinks = document.querySelector('.nav__links';
+    let navStructure = document.querySelector('nav'),
+        navLinks = document.querySelector('#primary-nav');
     
+    navLinks.classList.remove('nav__links');
+
+    console.log('success')
 
     }
 
