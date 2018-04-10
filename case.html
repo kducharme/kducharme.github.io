@@ -11,15 +11,29 @@
 
 <body>
     <!-- Primary navigation -->
-    <nav id='nav' class='nav'>
-        <a href='index' class='nav--logo'>Kyle Ducharme</a>
-        <div class='nav__links'>
-            <a href='index' class='nav--link'>Home</a>
-            <a href='case' class='nav--link active'>Case studies</a>
-            <a href='blog/posts' class='nav--link'>Blog</a>
-            <a id='navContact' class='nav--link'>Contact</a>
+    <nav id='nav'>
+        <a class='nav--logo'>
+            <img class='nav--logo-img' src='img/favicon.png'>
+        </a>
+
+        <div id="primary-nav" class='primary'>
+            <a href='index' class='primary--link'>Home</a>
+            <a href='case' class='primary--link active'>Case studies</a>
+            <a href='blog/posts' class='primary--link'>Blog</a>
+            <a id='navContact' class='primary--link'>Contact</a>
         </div>
+        <a href="javascript:void(0);" class="icon" id='menu'>&#9776;</a>
+
     </nav>
+    <div id="responsive-nav" class='responsive-nav hide'>
+        <span class='content--close' id='close-menu'>&times;</span>
+        <span class='all-links'>
+            <a href='index' class='responsive--link one'>Home</a>
+            <a href='case' class='responsive--link active two'>Case studies</a>
+            <a href='blog/posts' class='responsive--link three'>Blog</a>
+            <a id='navContact' class='responsive--link four'>Contact</a>
+        </span>
+    </div>
 
     <div class='case' id='caseStructure'>
         <h1 class='case--header'>Case studies.</h1>
@@ -27,86 +41,149 @@
             <nav id='side-nav' class='case--nav'>
                 <a id='edgenet' class='case--nav-link'>Edgenet</a>
                 <a id='wavefire' class='case--nav-link'>WaveFire</a>
-                <a id='splitsecnd' class='case--nav-link' >splitsecnd</a>
-                <a id='asp' class='case--nav-link' >ASP</a>
+                <a id='splitsecnd' class='case--nav-link'>splitsecnd</a>
+                <a id='asp' class='case--nav-link'>ASP</a>
             </nav>
             <div id='caseStudies' class='study'>
                 <span id='edgenetStudy' class='study--full'>
                     <p class='study--title'>Edgenet — Lead Product Designer</p>
-                    <p class='study--body'>Based in Nashville, TN, Edgenet is a growth-stage SaaS company that's product, utilized by more than 8,000 companies including Lowe's, Home Depot, GE, and Best Buy, makes the process of adding, managing, cleaning, and visualizing product data as simple and effective as possible. The product was originally built in 1990's with Silverlight, so the product's team task was to re-design and re-platform the product utilizing a more modern tech stack while ensuring that existing customers were supported during the migration.</p>
+                    <p class='study--body'>Based in Nashville, TN, Edgenet is a growth-stage SaaS company that's product, utilized by more than
+                        8,000 companies including Lowe's, Home Depot, GE, and Best Buy, makes the process of adding, managing,
+                        cleaning, and visualizing product data as simple and effective as possible. The product was originally
+                        built in 1990's with Silverlight, so the product's team task was to re-design and re-platform the
+                        product utilizing a more modern tech stack while ensuring that existing customers were supported
+                        during the migration.</p>
                     <p class='study--subtitle'>Responsibilities</p>
-                    <p class='study--body'>As the Lead Product Designer, I was responsible for managing the design team and developing the user experience and visual idendity  for the re-design of the platform. My day-to-day focus ranged from conducting user interviews & usability tests to designing hi-fidelity mockups and prototypes.</p>
+                    <p class='study--body'>As the Lead Product Designer, I was responsible for managing the design team and developing the user
+                        experience and visual idendity for the re-design of the platform. My day-to-day focus ranged from
+                        conducting user interviews & usability tests to designing hi-fidelity mockups and prototypes.</p>
                     <p class='study--subtitle'>Process</p>
-                    <p class='study--body'>The following were  steps involved in designing a feature during the re-design of the Edgenet platform. Please note: these steps were not completely sequential.
+                    <p class='study--body'>The following were steps involved in designing a feature during the re-design of the Edgenet platform.
+                        Please note: these steps were not completely sequential.
                         <ul>
-                            <li><span>Interviews: </span> conducted more than 100 interviews with internal and external stakeholders to determine state of product and usability</li>
-                            <li><span>Information architecture: </span>created high-level workflows for the architecture of the product based on interviews and card sorting exercises with stakeholders</li>
-                            <li><span>Wireframing & usability tests: </span>developed initial wireframes and goal-oriented usability tests (using Balsamiq) that were conducted on site with existing users</li>
-                            <li><span>Medium fidelty designs & usability tests: </span>updated product flow and designs to reflect feedback and developed new flow of medium fidelity designs to use for usability tests</li>
-                            <li><span>Hi-fidelty designs & interactive tests: </span>final iteration and created more interactive prototypes utilizing Proto.io, InVision, or Principle. </li>
-                            <li><span>Design handoff </span>created interaction and component guide for developers and led kick-off meeting to build rapport and walk developers through product team's vision</li>
+                            <li>
+                                <span>Interviews: </span> conducted more than 100 interviews with internal and external stakeholders
+                                to determine state of product and usability</li>
+                            <li>
+                                <span>Information architecture: </span>created high-level workflows for the architecture of the
+                                product based on interviews and card sorting exercises with stakeholders</li>
+                            <li>
+                                <span>Wireframing & usability tests: </span>developed initial wireframes and goal-oriented usability
+                                tests (using Balsamiq) that were conducted on site with existing users</li>
+                            <li>
+                                <span>Medium fidelty designs & usability tests: </span>updated product flow and designs to reflect
+                                feedback and developed new flow of medium fidelity designs to use for usability tests</li>
+                            <li>
+                                <span>Hi-fidelty designs & interactive tests: </span>final iteration and created more interactive
+                                prototypes utilizing Proto.io, InVision, or Principle. </li>
+                            <li>
+                                <span>Design handoff </span>created interaction and component guide for developers and led kick-off
+                                meeting to build rapport and walk developers through product team's vision</li>
                         </ul>
                     </p>
                     <p class='study--subtitle'>Visuals</p>
-                    <p class='study--body'>A sample visual for the product was the re-design of how suppliers organized and sent products to retailers. The feature was revamped to mirror the functionality of creating playlists in Spotify, which significantly simplified the process of adding, cleaning, and sending data within "product sets".
+                    <p class='study--body'>A sample visual for the product was the re-design of how suppliers organized and sent products to retailers.
+                        The feature was revamped to mirror the functionality of creating playlists in Spotify, which significantly
+                        simplified the process of adding, cleaning, and sending data within "product sets".
                     </p>
-                        <span class='visuals'>
-                            <p>Before: clunky, slow, and outdated UI that was confusing for users and difficult to understand where they were in the process of sending data to a retailer.</p>
-                            <img id='edgeOne' src='img/edgenetbefore.jpg'>
-                        </span>
-                        <span class='visuals'>
-                            <p>After: new UI was built to be as simple as possible for users with minimal exposure to technology (most users were recent grads at large companies). Primary focus of view is the product data within the set. </p>
-                            <img id='edgeTwo' src='img/edgenetafter.png'>
-                        </span>
+                    <span class='visuals'>
+                        <p>Before: clunky, slow, and outdated UI that was confusing for users and difficult to understand where
+                            they were in the process of sending data to a retailer.</p>
+                        <img id='edgeOne' src='img/edgenetbefore.jpg'>
+                    </span>
+                    <span class='visuals'>
+                        <p>After: new UI was built to be as simple as possible for users with minimal exposure to technology
+                            (most users were recent grads at large companies). Primary focus of view is the product data
+                            within the set. </p>
+                        <img id='edgeTwo' src='img/edgenetafter.png'>
+                    </span>
                 </span>
                 <span id='wavefireStudy' class='study--full'>
-                        <p class='study--title'>WaveFire — Lead Product Designer</p>
-                        <p class='study--body'>WaveFire is an early-stage startup that's building a cloud-based platform that simplifies the process of completing a HIPAA securtiy risk analysis in complex organizations. During a six month consultant role, I was responsible with working alongside the founders and technical team to design, test, and implement the user experience and visual design of the platform.</p>
-                        <p class='study--subtitle'>Product goals</p>
-                        <p class='study--body'>The product helps ensure that businesses of all sizes are compliant with HIPAA regulations and do not have unnecessary risk. With most users being non-technical and unfamiliar with HIPAA regulations, the goals for designing the product were to create simple, intuitive, and modern interface that walks users through the process in a TurboTax-esque experience. </p>
-                        <p class='study--subtitle'>Process</p>
-                        <p class='study--body'>Creating the WaveFire process followed significantly more iterative process that heavily focused on rapidly prototyping aspects of the product for testing and funding purposes.
-                            <ul>
-                                <li><span>Founder discovery: </span> 20+ hours of discovery and wireframing sessions with founders to understand the core problem, product's value proposition, and the proposed solution </li>
-                                <li><span>Wireframing: </span>created multiple rounds of wireframing and presented to founding team. Enhancements made based on feedback from internal and external stakeholders</li>
-                                <li><span>Hi-fidelity designs & interactive prototyping: </span>as part of the final delivery, multiple rounds of hifi designs were created to be used for usability testing. Also, full interactive prototype was built using InVision for usage in customer and investor presentations</li>
-                                <li><span>Design hand-off: </span>project delivery included all aspects of the design including wireframes, mockups, prototypes, and Zeplin links </li>
-                            </ul>
-                        </p>
-                        <p class='study--subtitle'>Visuals</p>
-                        <p class='study--body'>A sample visual for the product was the re-design of how suppliers organized and sent products to retailers. The feature was revamped to mirror the functionality of creating playlists in Spotify, which significantly simplified the process of adding, cleaning, and sending data within "product sets".
-                        </p>
-                        <span class='visuals'>
-                            <img id='waveOne' src='img/wavefire.png'>
-                            <img id='waveTwo' src='img/wavefiretwo.png'>
-                        </span>
-                        <p class='study--subtitle'>Outcome</p>
-                        <p class='study--body'>At the end of the engagement, the product was delivered to the founders in a way that was ready to be developed and utilized to continue fundraising/sales efforts. All deadlines were met and expectations exceeded (sounds corny, I know) throughout the duration of the project.</p>
+                    <p class='study--title'>WaveFire — Lead Product Designer</p>
+                    <p class='study--body'>WaveFire is an early-stage startup that's building a cloud-based platform that simplifies the process
+                        of completing a HIPAA securtiy risk analysis in complex organizations. During a six month consultant
+                        role, I was responsible with working alongside the founders and technical team to design, test, and
+                        implement the user experience and visual design of the platform.</p>
+                    <p class='study--subtitle'>Product goals</p>
+                    <p class='study--body'>The product helps ensure that businesses of all sizes are compliant with HIPAA regulations and do not
+                        have unnecessary risk. With most users being non-technical and unfamiliar with HIPAA regulations,
+                        the goals for designing the product were to create simple, intuitive, and modern interface that walks
+                        users through the process in a TurboTax-esque experience. </p>
+                    <p class='study--subtitle'>Process</p>
+                    <p class='study--body'>Creating the WaveFire process followed significantly more iterative process that heavily focused on rapidly
+                        prototyping aspects of the product for testing and funding purposes.
+                        <ul>
+                            <li>
+                                <span>Founder discovery: </span> 20+ hours of discovery and wireframing sessions with founders
+                                to understand the core problem, product's value proposition, and the proposed solution </li>
+                            <li>
+                                <span>Wireframing: </span>created multiple rounds of wireframing and presented to founding team.
+                                Enhancements made based on feedback from internal and external stakeholders</li>
+                            <li>
+                                <span>Hi-fidelity designs & interactive prototyping: </span>as part of the final delivery, multiple
+                                rounds of hifi designs were created to be used for usability testing. Also, full interactive
+                                prototype was built using InVision for usage in customer and investor presentations</li>
+                            <li>
+                                <span>Design hand-off: </span>project delivery included all aspects of the design including wireframes,
+                                mockups, prototypes, and Zeplin links </li>
+                        </ul>
+                    </p>
+                    <p class='study--subtitle'>Visuals</p>
+                    <p class='study--body'>A sample visual for the product was the re-design of how suppliers organized and sent products to retailers.
+                        The feature was revamped to mirror the functionality of creating playlists in Spotify, which significantly
+                        simplified the process of adding, cleaning, and sending data within "product sets".
+                    </p>
+                    <span class='visuals'>
+                        <img id='waveOne' src='img/wavefire.png'>
+                        <img id='waveTwo' src='img/wavefiretwo.png'>
                     </span>
+                    <p class='study--subtitle'>Outcome</p>
+                    <p class='study--body'>At the end of the engagement, the product was delivered to the founders in a way that was ready to be
+                        developed and utilized to continue fundraising/sales efforts. All deadlines were met and expectations
+                        exceeded (sounds corny, I know) throughout the duration of the project.</p>
+                </span>
                 </span>
                 <span id='splitsecndStudy' class='study--full'>
                     <p class='study--title'>splitsecnd — VP, User Experience</p>
-                    <p class='study--body'>Founded in Nashville, splitsecnd was the first plug-and-play crash response, roadside assistance, and driving analytics IoT product and platform on the market. Over the course of my 2.5 years with splitsecnd, my role focused on develping the simplest experience for drivers of all ages ranging from teens to aging seniors.</p>
+                    <p class='study--body'>Founded in Nashville, splitsecnd was the first plug-and-play crash response, roadside assistance, and
+                        driving analytics IoT product and platform on the market. Over the course of my 2.5 years with splitsecnd,
+                        my role focused on develping the simplest experience for drivers of all ages ranging from teens to
+                        aging seniors.</p>
                     <p class='study--subtitle'>Primary focus</p>
-                    <p class='study--body'>As the VP of User Experience, my responsibilities included overseeing the product design and brand team developing the end-to-end product experience ranging from packaging to web & mobile applications. In addition to this, I spent a significant amount of time working with the CEO and sales team leading product demos with potential customers and investors in the United States, Europe, and Middle East.</p>
+                    <p class='study--body'>As the VP of User Experience, my responsibilities included overseeing the product design and brand team
+                        developing the end-to-end product experience ranging from packaging to web & mobile applications.
+                        In addition to this, I spent a significant amount of time working with the CEO and sales team leading
+                        product demos with potential customers and investors in the United States, Europe, and Middle East.</p>
                     <p class='study--subtitle'>Detailed responsibilities</p>
-                        <p class='study--body'>Throughout my time with splitsecnd, I was responsible for the following tasks:
-                            <ul>
-                                <li><span>User experience design: </span> overseeing the strategy and implementation of the end-to-end product, including both the IoT device and platform, experience including product design, customer support, and more/li>
-                                <li><span>Wireframing: </span>created multiple rounds of wireframing and presented to founding team. Enhancements made based on feedback from internal and external stakeholders</li>
-                                <li><span>Hi-fidelity designs & interactive prototyping: </span>as part of the final delivery, multiple rounds of hifi designs were created to be used for usability testing. Also, full interactive prototype was built using InVision for usage in customer and investor presentations</li>
-                                <li><span>Design hand-off: </span>project delivery included all aspects of the design including wireframes, mockups, prototypes, and Zeplin links </li>
-                            </ul>
-                        </p>
+                    <p class='study--body'>Throughout my time with splitsecnd, I was responsible for the following tasks:
+                        <ul>
+                            <li>
+                                <span>User experience design: </span> overseeing the strategy and implementation of the end-to-end
+                                product, including both the IoT device and platform, experience including product design,
+                                customer support, and more/li>
+                                <li>
+                                    <span>Wireframing: </span>created multiple rounds of wireframing and presented to founding
+                                    team. Enhancements made based on feedback from internal and external stakeholders</li>
+                                <li>
+                                    <span>Hi-fidelity designs & interactive prototyping: </span>as part of the final delivery,
+                                    multiple rounds of hifi designs were created to be used for usability testing. Also,
+                                    full interactive prototype was built using InVision for usage in customer and investor
+                                    presentations
+                                </li>
+                                <li>
+                                    <span>Design hand-off: </span>project delivery included all aspects of the design including
+                                    wireframes, mockups, prototypes, and Zeplin links </li>
+                        </ul>
+                    </p>
                 </span>
-                    <span class='visuals'>
-                            <img id='splitsecndOne' src='img/splitsecnd.png'>
-                        </span>
-                    <div id='lightbox' class='modal hide'>
-                        <span class='content--close' id='closeLight'>&times;</span>
-                        <div class='content' id='content'>
-                        </div>
+                <span class='visuals'>
+                    <img id='splitsecndOne' src='img/splitsecnd.png'>
+                </span>
+                <div id='lightbox' class='modal hide'>
+                    <span class='content--close' id='closeLight'>&times;</span>
+                    <div class='content' id='content'>
                     </div>
+                </div>
             </div>
         </div>
     </div>
