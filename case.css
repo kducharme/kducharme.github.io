@@ -98,7 +98,7 @@
   
   .active {
     font-weight: var(--heavyWeight);
-    color: var(--primaryColor);
+    color: var(--accentColor);
     opacity: 1;
   }
   
@@ -290,6 +290,12 @@
   display: none;
   }
 
+  .responsive-nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
 
   nav a.icon {
     float: right;
@@ -346,4 +352,61 @@
     width: 95%;
   }
 
+  .responsive-nav {
+    font-size: 3em;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    background-color: white;
+    animation-duration: 1s;
+    animation-name: slidein;
+  }
+
+  @keyframes slidein {
+    from { margin-left: 100%; width: 200%;  }
+    to { margin-left: 0%; width: 100%; }
+  }
+
+  .primary {
+    animation-duration: 1s;
+    animation-name: slideout;
+  }
+
+  @keyframes slideout {
+    from { margin-left: 100%; width: 200%;  }
+    to { margin-left: 0%; width: 100%; }
+  }
+
+
+  .content--close {
+    display: flex;
+    flex-direction: row-reverse;
+    color: var(--primaryColor);
+    margin: 3% 5% 0px 0px;
+    font-size: 28px;
+    font-weight: var(--mediumWeight);
+  }
+
+
+  .all-links {
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .responsive--link {
+    margin: 15px 0 15px 0;
+  }
+  
+
+}
+
+.hide {
+  display: none;
+  transition: display 2s ease-out;
 }
