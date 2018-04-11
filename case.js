@@ -17,9 +17,28 @@ const jumpTo = (e) => {
 
 const jumpToLink = document.querySelector('#side-nav').addEventListener('click', jumpTo)
 
+const showContact = () => {
+    const modal = document.querySelector('#modal');
+    const body = document.querySelector('body');
+
+    modal.classList.toggle('hide');
+    body.classList.toggle('prevent-scroll');
+}
+
+const clickConstactInNav = document.querySelector('#navContact').addEventListener('click', showContact)
+
+const hideContact = () => {
+    const modal = document.querySelector('#modal');
+    const body = document.querySelector('body');
+
+    modal.classList.toggle('hide');
+    body.classList.toggle('prevent-scroll');
+}
+
+const closeContact = document.querySelector('#closeContact').addEventListener('click', hideContact)
 
 // Lightbox feature for clicking on images to view larger
-const lightBox = (e) => {
+const showLightbox = (e) => {
     let imageId = e.target.id,
         lightboxModal = document.querySelector('#lightbox'),
         lightboxContent = document.querySelector('#content'),
@@ -41,10 +60,10 @@ const lightBox = (e) => {
     }
 }
 
-const lightbox = document.querySelector('#caseStudies').addEventListener('click', lightBox)
+const lightbox = document.querySelector('#caseStudies').addEventListener('click', showLightbox)
 
 // Clicking outside of modal or 'x' closes it out
-const hideModal = () => {
+const closeLightbox = () => {
     const lightboxModal = document.querySelector('#lightbox');
     const lightboxContent = document.querySelector('#content');
     const close = document.querySelector('#closeLight');
@@ -54,7 +73,7 @@ const hideModal = () => {
 }
 
 // Event listeners for closing modal
-const closeLight = document.querySelector('#closeLight').addEventListener('click', hideModal);
+const closeLight = document.querySelector('#closeLight').addEventListener('click', closeLightbox);
 
 
 const showMenu = () => {

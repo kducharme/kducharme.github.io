@@ -51,17 +51,12 @@ button:hover, button:active {
 /* Navigation styles */
 
 nav {
-  padding: 5px 0px 0px 50px;
+  padding: 15px 0px 0px 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: transparent;
 }
-
-.nav--logo {
-  width: 30%;
-}
-
 
 .nav--logo-img {
   width: 40px;
@@ -105,12 +100,146 @@ nav {
 
 .primary--link:hover {
   opacity: .5;
+  cursor: pointer;
 }
 
 nav a.icon {
   display: none;
 }
 
+/* Contact modal styling */
+
+  
+.contact--modal {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: white;
+}
+
+.content--modal-contact {
+  background-color: var(--bgColor);
+  border-radius: 4px;
+  margin: auto;
+  padding: 20px 40px 40px 40px;
+  width: 50%;
+  max-width: 450px;
+  min-width: 340px;
+}
+
+.contact--close {
+  color: var(--primaryColor);
+  float: right;
+  font-size: 28px;
+  font-weight: var(--mediumWeight);
+  margin: 3% 5% 0 0;
+}
+
+.contact--close:hover{
+  opacity:.7;
+  cursor: pointer;
+}
+
+.prevent-scroll {
+  overflow: hidden;
+}
+
+/* Contact form */
+  
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 100%;
+  min-width: 300px;
+}
+
+.contact--title {
+  font-weight: var(--heavyWeight);
+  font-size: 1.8em;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  min-width: 240px;
+}
+
+.contact--body {
+  font-weight: var(--lightWeight);
+  text-align: center;
+  width: 70%;
+  min-width: 240px;
+  opacity: .5;
+  font-size: 1em;
+  margin: 15px 0 25px 0;
+  padding: 0px 0px 24px 0px;
+}
+
+.form {
+  height: 100%;
+  width: 50%;
+  min-width: 240px;
+  max-width: 400px;
+}
+
+.form > input, textarea {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: var(--fontPrimary);
+  font-size: 13px;
+  height: 38px;
+  width: 100%;
+  border: 1px solid #E7E7E7;
+  border-radius: 4px;
+  background-color: transparent;
+  margin: 8px 0px 20px 0px;
+  padding: 0px 0px 0px 8px;
+}
+
+.form > textarea {
+  padding: 8px 0px 0px 8px;
+  resize: none;
+}
+
+input::placeholder, textarea::placeholder{
+  color: rgb(189, 189, 189);
+}
+
+.form > input:active, input:focus, textarea:active, textarea:focus {
+  border: 1px solid var(--accentColor);
+  cursor: pointer;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -ms-transition: none;
+  -o-transition: none;
+  outline: none;
+} 
+
+.form > label {
+  font-size: 12px;
+  font-weight: var(--mediumWeight);
+  color: var(--primaryColor);
+}
+
+.contact--button {
+  background-color: var(--accentColor);
+  font-weight: var(--mediumWeight);
+  color: var(--lightColor);
+  float:right;
+  font-size: .8em;
+  border: none;
+  border-radius: 4px;
+  margin: 20px 0 0 0;
+}
+
+.contact--button:hover {
+  background-color: rgb(27, 59, 172);
+}
 
 @media (max-width: 670px) {
 
@@ -153,7 +282,6 @@ nav a.icon {
     flex-direction: column;
     width: 100%;
   }
-
 
   nav a.icon {
     float: right;

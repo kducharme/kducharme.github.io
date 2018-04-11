@@ -27,6 +27,26 @@ function fixStyling() {
     }
 }
 
+const showContactForm = () => {
+    const modal = document.querySelector('#contact-modal');
+    const body = document.querySelector('body');
+
+    modal.classList.toggle('hide');
+    body.classList.toggle('prevent-scroll');
+}
+
+const clickConstactInNav = document.querySelector('#navContact').addEventListener('click', showContactForm)
+
+const hideContact = () => {
+    const modal = document.querySelector('#contact-modal');
+    const body = document.querySelector('body');
+
+    modal.classList.toggle('hide');
+    body.classList.toggle('prevent-scroll');
+}
+
+const closeContact = document.querySelector('#closeContact').addEventListener('click', hideContact)
+
 // Parses data from Firebase's JSON data
 function parseData(data) {
     let post = data;
