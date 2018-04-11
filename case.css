@@ -1,115 +1,4 @@
-/* Global variables */
-
-:root {
-    --primaryColor: #1D2936;
-    --secondaryColor: #b3b3b1;
-    --accentColor: #3B60E4;
-    --lightColor: #fff;
-    --heavyWeight: 800;
-    --mediumWeight: 600;
-    --lightWeight: 400;
-    --thinWeight: 200;
-    --bgColor: #fff;
-    --fontPrimary: 'lato';
-    --fontSecondary: 'merriweather';
-    display: flex;
-  }
-  
-  /* Global styles */
-  
-  h1, h2, h3, h4, h5, h6, p, a, label, li {
-    font-family: var(--fontPrimary);
-    color: var(--primaryColor);
-    text-decoration: none;
-  }
-  
-  body {
-    width: 100%;
-    margin: 0px;
-  }
-  
-  .hide {
-    display: none;
-    transition: display 2s ease-out;
-  }
-  
-  button {
-    height: 42px;
-    padding: 7px 20px 7px 20px;
-  }
-  
-  button:hover, button:active {
-    cursor: pointer;
-    -webkit-transition: none;
-    -moz-transition: none;
-    -ms-transition: none;
-    -o-transition: none;
-    outline: none;
-  }
-  
-  /* Navigation styles */
-  
-  nav {
-    padding: 15px 0px 0px 50px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: transparent;
-  }
-  
-  .nav--logo {
-    font-weight: var(--mediumWeight);
-    color: var(--secondaryColor);
-    font-size: 13px;
-    width: 30%;
-  }
-
-  .nav--logo-img {
-    width: 40px;
-  }
-
-  nav a.icon {
-    display: none;
-  }
-
-  .nav--logo:hover {
-    cursor: pointer;
-    opacity: .6;
-  }
-  
-  .primary {
-    margin: 0px 50px 0px 10px;
-    font-size: 14px;
-    opacity: .8;
-  }
-
-  .primary--link {
-    margin: 0 15px 0 15px;
-
-  }
-
-  .primary--link:last-child {
-    margin: 0 0 0 15px;
-  }
-
-  .primary--link:hover {
-    opacity: .5;
-  }
-  
-  .active {
-    font-weight: var(--heavyWeight);
-    color: var(--accentColor);
-    opacity: 1;
-  }
-  
-  /* Landing section structure */
-  
-.landing {
-    display: flex;
-    flex-direction: row;
-  }
-  
-  /* Hero section styles */
+ /* Case studies structure */
   
 .case {
     padding: 0px 50px 0px 50px;
@@ -118,7 +7,6 @@
 .case--header {
     font-weight: var(--mediumWeight);
     font-family: var(--fontSecondary);
-    line-height: 1.5;
     font-size: 3em;
     margin: 0px;
     padding: 5% 0 7% 0;
@@ -129,6 +17,8 @@
     height: 100%;
     padding-right: 8%;
 }
+
+/* Side navigation */
 
 .case--nav {
     display: flex;
@@ -145,13 +35,14 @@
 
 .case--nav-link { 
     margin-bottom: 15px;
-    text-decoration: none;
 }
 
 .case--nav-link:hover {
     opacity: .6;
     cursor: pointer;
 }
+
+/* Individual case studies */
 
 .study {
     display: flex;
@@ -184,7 +75,6 @@
     color: var(--primaryColor);
     font-weight: var(--lightWeight);
     font-size: 1em;
-    line-height: 1.7;
     opacity: .7;
 }
 
@@ -255,56 +145,6 @@
 }
 
 @media (max-width: 670px) {
-
-  /* Navigation responsiveness */
-
-  nav {
-    height: 30px;
-    padding: 5% 7% 5% 7%;
-    background-color: white;
-    box-shadow: 0px 0px 20px 0 rgba(0,0,0,0.10);
-    z-index: 1;
-    position: sticky;
-    top: 0;
-    overflow: hidden;
-  }
-
-  .nav-dropdown {
-    height: 100px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-  }
-
-  .nav--logo-img {
-    height: 35px;
-    width: auto;
-  }
-
-  nav .icon {
-    color: var(--primaryColor);
-    font-size: 1.3em;
-  }
-  
-  .primary--link {
-  display: none;
-  }
-
-  .responsive-nav {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-  }
-
-
-  nav a.icon {
-    float: right;
-    display: block;
-  }
-
-  .display-nav {
-    height: 300px;
-  }
   
   /* Main content responsivenesss */
   
@@ -351,62 +191,3 @@
   .study {
     width: 95%;
   }
-
-  .responsive-nav {
-    font-size: 3em;
-    position: fixed;
-    top: 0;
-    z-index: 1;
-    width: 100vw;
-    height: 100vh;
-    overflow: auto;
-    background-color: white;
-    animation-duration: 1s;
-    animation-name: slidein;
-  }
-
-  @keyframes slidein {
-    from { margin-left: 100%; width: 200%;  }
-    to { margin-left: 0%; width: 100%; }
-  }
-
-  .primary {
-    animation-duration: 1s;
-    animation-name: slideout;
-  }
-
-  @keyframes slideout {
-    from { margin-left: 100%; width: 200%;  }
-    to { margin-left: 0%; width: 100%; }
-  }
-
-
-  .content--close {
-    display: flex;
-    flex-direction: row-reverse;
-    color: var(--primaryColor);
-    margin: 3% 5% 0px 0px;
-    font-size: 28px;
-    font-weight: var(--mediumWeight);
-  }
-
-
-  .all-links {
-    display: flex;
-    flex-direction: column;
-    height: 90%;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .responsive--link {
-    margin: 15px 0 15px 0;
-  }
-  
-
-}
-
-.hide {
-  display: none;
-  transition: display 2s ease-out;
-}

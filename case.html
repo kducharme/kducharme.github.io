@@ -5,7 +5,10 @@
     <title>Kyle Ducharme</title>
     <meta name="description" content="Kyle Ducharme is a product designer and developer based in Nashville, TN building software products.">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+
+    <link href="style.css" rel="stylesheet">
     <link href="case.css" rel="stylesheet">
+
     <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
 </head>
 
@@ -26,7 +29,7 @@
 
     </nav>
     <div id="responsive-nav" class='responsive-nav hide'>
-        <span class='content--close' id='close-menu'>&times;</span>
+        <span class='close--menu' id='close-menu'>&times;</span>
         <span class='all-links'>
             <a href='index' class='responsive--link one'>Home</a>
             <a href='case' class='responsive--link active two'>Case studies</a>
@@ -185,6 +188,35 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <div id='modal' class='contact--modal hide'>
+
+        <!-- Modal content -->
+        <div class='contact--modal-content' id='content'>
+
+            <span class='contact--close' id='closeContact'>&times;</span>
+            <div id='contact-form' class='contact'>
+                <p class='contact--title' id='contact-title'>I'd love to hear from you.</p>
+                <p class='contact--body' id='contact-body'>If you're interested in partnering on a project or working together full-time, I'd love to hear from you. Fill out the form below, and I'll get back to you within 24 hours.</p>
+                <span class='form' id='form'>
+                    <label for="fullNme">Full name</label>
+                    <input id='fullName' type="text" placeholder="Full name">
+
+                    <label for="email">E-mail address</label>
+                    <input id='email' type="text" placeholder="E-mail address">
+
+                    <label for="company">Company name</label>
+                    <input id='company' type="text" placeholder="Company">
+
+                    <label for="message">Message </label>
+                    <textarea id='message' rows='4' placeholder="Enter message..."></textarea>
+
+                    <button class='contact--button' id='submit'>Send message</button>
+                </span>
+            </div>
+
         </div>
     </div>
 
