@@ -7,7 +7,6 @@ function getData() {
         url: 'https://kyle-personal-blog.firebaseio.com/posts.json?print=pretty',
         type: "GET",
         success: function (data) {
-            console.log('success - data received');
             parseData(data);
             fixStyling();
         },
@@ -77,11 +76,8 @@ function sortPost(allPosts) {
 function printPosts(filteredPosts) {
     let posts = filteredPosts;
     let printedPosts = ""
-    console.log(filteredPosts)
-
     for (var i = 0; i < allPosts.length; i++) {
-        let indivPost = posts[i]
-        console.log(indivPost)
+        let indivPost = posts[i];
         printedPosts += `<div class="printed--post">
         <p class="post-title">${indivPost.title}<span class="post-date">${indivPost.date}</span></p>
         <p class="post-content">${indivPost.content}</p></div>`;

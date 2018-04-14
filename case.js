@@ -11,7 +11,7 @@ const jumpTo = (e) => {
     }
 
     location = document.querySelector(jobs[e.target.id]).getBoundingClientRect();
-    window.scroll({ top: location.top, left: 0, behavior: 'smooth' });
+    window.scroll({ top: location.top - 30, left: 0, behavior: 'smooth' });
 }
 
 const jumpToLink = document.querySelector('#side-nav').addEventListener('click', jumpTo)
