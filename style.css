@@ -298,8 +298,16 @@ nav a.icon {
   display: none;
 }
 
-
 .hide {
   display: none;
   transition: display 2s ease-out;
+}
+
+.contact {
+  margin: 0 4% 0 4%;
+}
+
+.contact--close {
+  margin: 0;
+  display: none;
 }

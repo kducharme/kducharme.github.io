@@ -8,6 +8,8 @@ const showContactForm = () => {
     // body.classList.toggle('prevent-scroll');
 }
 
+const responsiveContact = document.querySelector('#responsiveContact').addEventListener('click', showContactForm)
+
 const clickConstactInNav = document.querySelector('#navContact').addEventListener('click', showContactForm)
 
 const hideContact = () => {
@@ -19,6 +21,7 @@ const hideContact = () => {
     modal.classList.add('hide');
     body.classList.toggle('prevent-scroll');
 }
+
 
 const closeContact = document.querySelector('#closeContact').addEventListener('click', hideContact)
 
