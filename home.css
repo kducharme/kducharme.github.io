@@ -266,3 +266,15 @@
   .resume--button:hover {
     background-color: rgb(27, 59, 172);
   }
+
+  @media (max-width: 670px) {
+    .hero {
+      height: 90vh;
+    }
+
+    .hero--h1 {
+      font-weight: var(--heavyWeight);
+      font-size: 2.7em;
+      margin: 0px;
+    }
+  }
