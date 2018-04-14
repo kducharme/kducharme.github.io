@@ -1,38 +1,22 @@
-// Rotates emojis in hero text on loading
-const rotateEmoji = () => {
-    let emoji = document.querySelector('#emoji'),
-        allEmojis = ['👯', '🤓', '🕺🏻', '🙋‍♂️', '🤘🏻', '🤸🏻‍', '👨‍💻', '🤾🏻‍♂️'],
-        showEmoji, i = 0;
-
-    let timer = setInterval(() => {
-        if (allEmojis.length == i) {
-            i = 0;
-        }
-        else {
-            showEmoji = allEmojis[i];
-            emoji.textContent = showEmoji;
-            i++;
-        }
-    }, 2000);
-}
-
-const rotate = window.addEventListener('load', rotateEmoji);
-
 const showContactForm = () => {
     const modal = document.querySelector('#contact-modal');
     const body = document.querySelector('body');
-
+    const nav = document.querySelector('nav');
+    
+    modal.classList.toggle('prevent-scroll')
     modal.classList.toggle('hide');
-    body.classList.toggle('prevent-scroll');
+    // body.classList.toggle('prevent-scroll');
 }
 
 const clickConstactInNav = document.querySelector('#navContact').addEventListener('click', showContactForm)
 
 const hideContact = () => {
-    const modal = document.querySelector('#contact-modal');
+    const contactModal = document.querySelector('#contact-modal');
+    const modal = document.querySelector('#modal');
     const body = document.querySelector('body');
 
-    modal.classList.toggle('hide');
+    contactModal.classList.add('hide');
+    modal.classList.add('hide');
     body.classList.toggle('prevent-scroll');
 }
 
@@ -60,7 +44,7 @@ const learnMore = (e) => {
         resume.classList.remove('hide');
         bottomBar.classList.remove('more--connect');
         aboutContainer.classList.add('about--after');
-        window.scroll({ top: clickLocation - 30, left: 0, behavior: 'smooth' });
+        window.scroll({ top: clickLocation, left: 0, behavior: 'smooth' });
     }, 600)
     
     hideButton.classList.add('more--view-cta-after');
@@ -104,9 +88,7 @@ const showModal = () => {
         closeContact = document.querySelector('#close-contact'),
         close = document.querySelector('#close');
 
-    closeContact.classList.add('hide');
-    modal.classList.remove('hide');
-    contact.classList.add('hide')
+    modal.classList.toggle('hide');
 }
 
 // Event listener for showing modal after clicking 'click'
@@ -115,19 +97,19 @@ const click = document.querySelector('#click').addEventListener('click', showMod
 // Displays modal when user clicks 'interested' in modal
 const expandModal = () => {
     let modal = document.querySelector('#modal'),
+        contactModal = document.querySelector('#contact-modal'),
         container = document.querySelector('#content'),
         buttonOne = document.querySelector('#interested'),
         buttonTwo = document.querySelector('#notInterested'),
         modalTitle = document.querySelector('#modal-title'),
         modalBody = document.querySelector('#modal-body'),
-        closeContact = document.querySelector('#close-contact'),
-        close = document.querySelector('#close');
+        closeContact = document.querySelector('#close');
 
+    contactModal.classList.toggle('hide');
     buttonOne.classList.add('hide');
     buttonTwo.classList.add('hide');
     modalTitle.classList.add('hide');
     modalBody.classList.add('hide');
-    close.classList.add('hide');
     closeContact.remove('hide');
 
     container.classList.add('content--after');
@@ -143,22 +125,7 @@ const expandModal = () => {
 // Event listener for showing contact form
 const expand = document.querySelector('#interested').addEventListener('click', expandModal);
 
-// Contact form appears after user clicks 'interested'
-const showContact = () => {
-    let contact = document.querySelector('#contact-form'),
-        form = document.querySelector('#form'),
-        contactTitle = document.querySelector('#contact-title'),
-        backgroundContent = document.querySelector('#content'),
-        contactBody = document.querySelector('#contact-body');
 
-    contact.classList.remove('hide');
-    form.classList.remove('hide');
-    contactTitle.classList.remove('hide');
-    contactBody.classList.remove('hide');
-}
-
-// Event listener for clicking 'contact' in primary nav
-const contactNav = document.querySelector('#navContact').addEventListener('click', showContact)
 
 const hideModal = () => {
     let modal = document.querySelector('#modal'),
@@ -168,18 +135,5 @@ const hideModal = () => {
 
 // Event listeners for closing modal
 const close = document.querySelector('#close').addEventListener('click', hideModal);
+
 const notInterested = document.querySelector('#notInterested').addEventListener('click', hideModal);
-
-const sendForm = () => {
-    let fullName = document.querySelector('#fullName').value,
-        email = document.querySelector('#email').value,
-        company = document.querySelector('#company').value,
-        message = document.querySelector('#message').value;
-
-    let name = fullName.split(' '),
-        firstName = name[0],
-        lastName = name[1];
-}
-
-// Event listener for submitting form
-const submitForm = document.querySelector('#submit').addEventListener('click', sendForm);

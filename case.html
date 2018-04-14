@@ -8,6 +8,7 @@
 
     <link href="style.css" rel="stylesheet">
     <link href="case.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
 </head>
@@ -22,7 +23,7 @@
         <div id="primary-nav" class='primary'>
             <a href='index' class='primary--link'>Home</a>
             <a href='case' class='primary--link active'>Case studies</a>
-            <a href='blog/posts' class='primary--link'>Blog</a>
+            <a href='posts' class='primary--link'>Blog</a>
             <a id='navContact' class='primary--link'>Contact</a>
         </div>
         <a href="javascript:void(0);" class="icon" id='menu'>&#9776;</a>
@@ -191,35 +192,39 @@
         </div>
     </div>
 
-    <div id='modal' class='contact--modal hide'>
+        <!-- Contact modal -->
+        <div id='contact-modal' class='contact--modal hide'>
+                <!-- Modal content -->
+                <div class='contact--modal-content' id='content'>
+                    <span class='contact--close' id='closeContact'>&times;</span>
+                    <div id='contact-form' class='contact'>
+                        <p class='contact--title' id='contact-title'>I'd love to hear from you.</p>
+                        <p class='contact--body' id='contact-body'>It's great to meet you! My name's Kyle, and I'm a full-stack designer (product design + front-end development)
+                            that's been building and delivering products for 5+ years. If you're looking for a partner to build
+                            a project or are interested in connecting about a full-time role, I'd love to hear from you!</p>
+    
+                        <span class='details--info' id='form'>
+                            <span>
+                                <a href=''>
+                                    <i class="material-icons">email</i>
+                                </a>
+                                <a href=''>
+                                    <img class='details--svg' src="img/git.svg" .svg alt="github">
+                                </a>
+                                <a href=''>
+                                    <img class='details--svg' src="img/drib.svg" .svg alt="dribbble">
+                                </a>
+                                <a href=''>
+                                    <img class='details--svg' src="img/li.svg" .svg alt="linkedin">
+                                </a>
+    
+                            </span>
+                        </span>
+                    </div>
+    
+                </div>
 
-        <!-- Modal content -->
-        <div class='contact--modal-content' id='content'>
-
-            <span class='contact--close' id='closeContact'>&times;</span>
-            <div id='contact-form' class='contact'>
-                <p class='contact--title' id='contact-title'>I'd love to hear from you.</p>
-                <p class='contact--body' id='contact-body'>If you're interested in partnering on a project or working together full-time, I'd love to hear from you. Fill out the form below, and I'll get back to you within 24 hours.</p>
-                <span class='form' id='form'>
-                    <label for="fullNme">Full name</label>
-                    <input id='fullName' type="text" placeholder="Full name">
-
-                    <label for="email">E-mail address</label>
-                    <input id='email' type="text" placeholder="E-mail address">
-
-                    <label for="company">Company name</label>
-                    <input id='company' type="text" placeholder="Company">
-
-                    <label for="message">Message </label>
-                    <textarea id='message' rows='4' placeholder="Enter message..."></textarea>
-
-                    <button class='contact--button' id='submit'>Send message</button>
-                </span>
-            </div>
-
-        </div>
-    </div>
-
+    <script src="app.js"></script>
     <script src="case.js"></script>
 </body>
 
