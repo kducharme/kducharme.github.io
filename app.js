@@ -8,6 +8,8 @@ const showContactForm = () => {
     // body.classList.toggle('prevent-scroll');
 }
 
+const responsiveContact = document.querySelector('#responsiveContact').addEventListener('click', showContactForm)
+
 const clickConstactInNav = document.querySelector('#navContact').addEventListener('click', showContactForm)
 
 const hideContact = () => {
@@ -20,4 +22,25 @@ const hideContact = () => {
     body.classList.toggle('prevent-scroll');
 }
 
+
 const closeContact = document.querySelector('#closeContact').addEventListener('click', hideContact)
+
+const showMenu = () => {
+    const primaryNav = document.querySelector('#primary-nav');
+    const responsiveNav = document.querySelector('#responsive-nav');
+
+    primaryNav.classList.add('hide');
+    responsiveNav.classList.remove('hide');
+}
+
+const hamburger = document.querySelector('#menu').addEventListener('click', showMenu);
+
+const hideMenu = () => {
+    const primaryNav = document.querySelector('#primary-nav');
+    const responsiveNav = document.querySelector('#responsive-nav');
+
+    primaryNav.classList.remove('hide');
+    responsiveNav.classList.add('hide');
+}
+
+const exit = document.querySelector('#close-menu').addEventListener('click', hideMenu);
