@@ -219,7 +219,6 @@ nav a.icon {
     flex-direction: column;
     justify-content: flex-start;
   }
-
   .nav--logo-img {
     height: 35px;
     width: auto;
@@ -294,6 +293,11 @@ nav a.icon {
   }
   
 }
+
+#about {
+  display: none;
+}
+
 
 .hide {
   display: none;
