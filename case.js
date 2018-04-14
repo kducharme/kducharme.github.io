@@ -7,7 +7,8 @@ const jumpTo = (e) => {
         'wavefire': '#wavefireStudy',
         'splitsecnd': '#splitsecndStudy',
         'edgenet': '#edgenetStudy',
-        'asp': '#aspStudy'
+        'asp': '#aspStudy',
+        'impactful': '#impactfulstudy'
     }
 
     location = document.querySelector(jobs[e.target.id]).getBoundingClientRect();
