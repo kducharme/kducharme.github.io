@@ -26,7 +26,7 @@ function fixStyling() {
     }
 }
 
-const showContactForm = () => {
+const showContact = () => {
     const modal = document.querySelector('#contact-modal');
     const body = document.querySelector('body');
 
@@ -34,7 +34,7 @@ const showContactForm = () => {
     body.classList.toggle('prevent-scroll');
 }
 
-const clickConstactInNav = document.querySelector('#navContact').addEventListener('click', showContactForm)
+const clickConstactInNav = document.querySelector('#navContact').addEventListener('click', showContact)
 
 const hideContact = () => {
     const modal = document.querySelector('#contact-modal');

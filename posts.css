@@ -60,3 +60,20 @@
     line-height: 23px;
     line-height: 1.7;
 }
+
+@media (max-width: 670px) {
+
+    .case--header {
+        padding-left: 0;
+    }
+    .posts-body {
+        width: 90%;
+    }
+    
+    .printed--post{
+        margin: 0 4% 0 4%;
+        margin: 0;
+        padding: 0;
+    }
+
+}
