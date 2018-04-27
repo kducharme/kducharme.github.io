@@ -111,6 +111,9 @@ nav a.icon {
 
   
 .contact--modal {
+  display: flex;
+  justify-content: center;
+  align-items: centers;
   background-color: var(--primaryColor);
   position: fixed;
   z-index: 1;
@@ -120,8 +123,8 @@ nav a.icon {
   height: 100vh;
 }
 
-.contact-form {
-  padding-top: 100px;
+.contact {
+  height: 100%;
 }
 
 .contact--modal-content {
@@ -152,7 +155,6 @@ nav a.icon {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 100px;
   color: white;
 }
 
