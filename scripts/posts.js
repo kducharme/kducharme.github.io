@@ -1,4 +1,3 @@
-getData()
 let allPosts = [];
 
 // Gets data from Firebase
@@ -15,6 +14,7 @@ function getData() {
         }
     });
 }
+getData()
 
 // Removes Knook page styling and editability
 function fixStyling() {
@@ -25,26 +25,6 @@ function fixStyling() {
         post[i].classList.add('post-content');
     }
 }
-
-const showContact = () => {
-    const modal = document.querySelector('#contact-modal');
-    const body = document.querySelector('body');
-
-    modal.classList.toggle('hide');
-    body.classList.toggle('prevent-scroll');
-}
-
-const clickConstactInNav = document.querySelector('#navContact').addEventListener('click', showContact)
-
-const hideContact = () => {
-    const modal = document.querySelector('#contact-modal');
-    const body = document.querySelector('body');
-
-    modal.classList.toggle('hide');
-    body.classList.toggle('prevent-scroll');
-}
-
-const closeContact = document.querySelector('#closeContact').addEventListener('click', hideContact)
 
 // Parses data from Firebase's JSON data
 function parseData(data) {
