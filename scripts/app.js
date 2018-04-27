@@ -1,6 +1,5 @@
-const closeContact = document.querySelector('#closeContact').addEventListener('click', hideContact)
-
 const showMenu = () => {
+    console.log('hi')
     const primaryNav = document.querySelector('#primary-nav');
     const responsiveNav = document.querySelector('#responsive-nav');
 
