@@ -15,19 +15,37 @@ const dropdownFactory = (button, options, eventListener, addLeft, addTop, option
 
     // Positions dropdown based on button position
     dropdown.style.left = `${buttonPosition.left + addLeft}px`;
-    dropdown.style.top = `${buttonPosition.top + addTop}px`;
+    dropdown.style.top = `${buttonPosition.top + addTop}px`;    
 
     // Adds options to the dropdown
     options.forEach(o => {
-        const option = document.createElement('p')
+        const option = document.createElement('a')
         option.textContent = o;
         option.classList = 'dropdown__option';
         option.setAttribute('id', `m${o}`)
-        option.addEventListener('click', function (e) {
-            const modalManager = require('../modal/modalManager');
-            const key = e.target.id;
-            modalManager[key]()
-        })
+        let link = '';
+        switch(o) {
+            case 'Email':
+                link = 'mailto:ducharme.kyle@gmail.com?Subject=Hello!'
+                break;
+            case 'Dribbble':
+                link = 'https://dribbble.com/kducharme'
+                option.setAttribute('target', '_blank');
+                break;
+            case 'LinkedIn':
+                link = 'https://dribbble.com/kducharme'
+                option.setAttribute('target', '_blank');
+                break;
+            case 'GitHub':
+                link = 'https://github.com/kducharme'
+                option.setAttribute('target', '_blank');
+                break;
+            case 'Medium':
+                link = 'https://medium.com/@kyleducharme'
+                option.setAttribute('target', '_blank');
+                break;
+        }
+    option.href = link;
         dropdown.appendChild(option);
     })
     structure.appendChild(bg);
