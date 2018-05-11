@@ -1,0 +1,79 @@
+:root {
+    --primaryColor: #0069ff;
+    --primaryGradientColor: #1633ff;
+    --secondaryColor: #101D42;
+    --accentColor: #E94F37;
+    --accentHoverColor: #C6351F;
+    --backgroundColor: white;
+    --fillColor: #F7F8F9;
+    --messageFill: rgb(241, 242, 243);
+    --borderColor: #D7D8DB;
+}
+
+h1, h2, h3, h4, h5, p, a, label, button, span {
+    font-family: 'Lato';
+    color: var(--secondaryColor);
+}
+
+button {
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+    border: none;
+    border-radius: 3px;
+}
+
+button:hover, button:active, button:focus, a:hover, a:focus, input:focus, input:active, div:active, div:focus  {
+    cursor: pointer;
+    -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: none;
+    outline: none;
+}
+
+input:active, input:focus {
+    cursor: text;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navigation */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--secondaryColor);
+    height: 50px;
+    padding: 0 40px 0 40px;
+}
+
+.logo {
+    height: 24px;
+    width: auto;
+    padding-right: 10px;
+}
+
+/* Primary content */
+
+.content {
+    display: flex;
+    height: calc(100vh - 50px);
+}
+
+.content__data {
+    display: flex;
+    flex-direction: column;
+    width: calc(100vw - 360px);
+}
+
+.content__tasks {
+    flex-basis: 360px;
+    border-left: 1px solid var(--borderColor);
+    background-color: var(--fillColor);
+}
