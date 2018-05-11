@@ -25,7 +25,7 @@ const headerManager = Object.create(null, {
         value: function () {
             // Creates the container for the tabs
             const structure = document.createElement('span');
-            const tabs = ['Overview', 'Experience', 'References']
+            const tabs = ['Overview']
             structure.classList = 'header__tabList';
 
             // Adds the tab content to the container

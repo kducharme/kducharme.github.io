@@ -28,7 +28,7 @@ const experienceManager = Object.create(null, {
 
             const $aboutBody = $('<p>');
             $aboutBody.addClass('experience__about--body');
-            $aboutBody.text('Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.')
+            $aboutBody.text(`I'm a Nashville-based user experience (UX) and user interface (UI) designer with technical chops that loves bringing ideas to life. Over the past five years, I've been blessed with opportunities to build products that have helped keep drivers safer, businesses more efficient, and hospitals safer.`);
 
             $about.append($aboutTitle, $aboutBody);
             return $about;
@@ -47,7 +47,7 @@ const experienceManager = Object.create(null, {
             $skillOneTitle.text('User Experience')
             const $skillOneBody = $('<p>');
             $skillOneBody.addClass('experience__skills--body');
-            $skillOneBody.text('At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesen.')
+            $skillOneBody.text('At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesen et iusto odio dignissimos ducimus qui blanditiis praesen.')
             $skillOne.append($skillOneTitle, $skillOneBody);
             
             // Second skill
@@ -59,7 +59,7 @@ const experienceManager = Object.create(null, {
             $skillTwoTitle.text('Front-End Dev')
             const $skillTwoBody = $('<p>');
             $skillTwoBody.addClass('experience__skills--body');
-            $skillTwoBody.text('At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesen.')
+            $skillTwoBody.text('At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesen et iusto odio dignissimos ducimus qui blanditiis praesen.')
             $skillTwo.append($skillTwoTitle, $skillTwoBody);
             
             $skills.append($skillOne, $skillTwo);

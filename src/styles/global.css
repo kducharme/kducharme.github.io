@@ -86,8 +86,8 @@ nav > p {
     width: calc(100vw - 360px);
 }
 
-.content__tasks {
-    flex-basis: 360px;
-    border-left: 1px solid var(--borderColor);
+.content__nav {
+    flex-basis: 300px;
+    border-right: 1px solid var(--borderColor);
     background-color: var(--fillColor);
 }
