@@ -5,3 +5,5 @@ headerManager.createStructure();
 headerManager.navigateTabs();
 
 experienceManager.experienceBlock();
+
+console.log('hi')

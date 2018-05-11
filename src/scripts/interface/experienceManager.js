@@ -1,68 +1,71 @@
 const $ = require('jquery');
-const $printArea = $('#data');
+const $printArea = $('#primary');
 
 // Manages the friend view
 const experienceManager = Object.create(null, {
     experienceBlock: {
         value: function () {
             const $structure = $('<span>');
-            $structure.addClass('friends');
+            $structure.addClass('experience');
 
             // Gets list of friends & messages
-            const $friendList = experienceManager.friendList();
-            const $friendMessages = experienceManager.friendMessages();
+            const $experienceAbout = experienceManager.experienceOverview();
+            const $experienceSkills = experienceManager.experienceSkills();
 
             // Appends everything to section
-            $structure.append($friendList, $friendMessages);
+            $structure.append($experienceAbout, $experienceSkills);
             $printArea.append($structure);
         }
     },
-    experienceList: {
+    experienceOverview: {
         value: function () {
-            const $friendList = $('<span>');
-            $friendList.addClass('friends__list');
+            const $about = $('<span>');
+            $about.addClass('experience__about');
 
-            return $friendList;
+            const $aboutTitle = $('<p>');
+            $aboutTitle.addClass('experience__about--title');
+            $aboutTitle.text('Hi, my name is Kyle.')
+
+            const $aboutBody = $('<p>');
+            $aboutBody.addClass('experience__about--body');
+            $aboutBody.text('Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.')
+
+            $about.append($aboutTitle, $aboutBody);
+            return $about;
         }
     },
-    experienceMessages: {
+    experienceSkills: {
         value: function () {
-            const $friendMessages = $('<span>');
-            $friendMessages.addClass('friends__messages');
-            const writeMessages = experienceManager.writeMessages();
-            const showMessages = experienceManager.showMessages();
+            const $skills = $('<span>');
+            $skills.addClass('experience__skills');
 
-            // Appending to the message block
-            $friendMessages.append(showMessages, writeMessages);
+            // First skill
+            const $skillOne = $('<span>');
+            $skillOne.addClass('skill');
+            const $skillOneTitle = $('<p>');
+            $skillOneTitle.addClass('experience__skills--title');
+            $skillOneTitle.text('User Experience')
+            const $skillOneBody = $('<p>');
+            $skillOneBody.addClass('experience__skills--body');
+            $skillOneBody.text('At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesen.')
+            $skillOne.append($skillOneTitle, $skillOneBody);
+            
+            // Second skill
+            const $skillTwo = $('<span>')
+            $skillTwo.addClass('skill')
 
-            return $friendMessages;
+            const $skillTwoTitle = $('<p>');
+            $skillTwoTitle.addClass('experience__skills--title');
+            $skillTwoTitle.text('Front-End Dev')
+            const $skillTwoBody = $('<p>');
+            $skillTwoBody.addClass('experience__skills--body');
+            $skillTwoBody.text('At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesen.')
+            $skillTwo.append($skillTwoTitle, $skillTwoBody);
+            
+            $skills.append($skillOne, $skillTwo);
+            return $skills;
         }
     },
-    experienceMessages: {
-        value: function () {
-            const $postMessages = $('<span>');
-            $postMessages.addClass('friends__messages--post');
-
-            return $postMessages;
-        }
-    },
-    experienceMessages: {
-        value: function () {
-            const $writeArea = $('<input>');
-            $writeArea.attr('placeholder', 'Enter message');
-            $writeArea.addClass('friends__messages--write');
-            $writeArea.keypress(function (e) {
-                if ($writeArea.val()) {
-                    if (e.which === 13) {
-                        experienceManager.postMessages($writeArea.val());
-                        experienceManager.clearWriteArea();
-                        experienceManager.scrollToBottom();
-                    }
-                }
-            })
-            return $writeArea;
-        }
-    }
 })
 
 module.exports = experienceManager;

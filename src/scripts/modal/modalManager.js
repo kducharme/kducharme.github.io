@@ -9,6 +9,7 @@ const modalManager = Object.create(null, {
     // Adding new friend
     mFriend: {
         value: function () {
+            console.log('friend')
             // Creating arguments for modalFactory;
             const title = 'Add new friend'
             const details = 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa.';

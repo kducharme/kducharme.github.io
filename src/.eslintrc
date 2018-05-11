@@ -10,7 +10,9 @@
         "semi": 0,
         "no-trailing-spaces": [
             0,
-            { "skipBlankLines": true }
+            {
+                "skipBlankLines": true
+            }
         ],
         "eqeqeq": 2
     }

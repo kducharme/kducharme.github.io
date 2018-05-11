@@ -1,6 +1,7 @@
 const $ = require('jquery');
 const $printArea = $('#primary');
 const buttonFactory = require('../factories/buttonFactory');
+const modalFactory = require('../factories/modalFactory');
 
 const headerManager = Object.create(null, {
     createStructure: {
@@ -24,7 +25,7 @@ const headerManager = Object.create(null, {
         value: function () {
             // Creates the container for the tabs
             const structure = document.createElement('span');
-            const tabs = ['Friends', 'Events', 'Articles']
+            const tabs = ['Overview', 'Experience', 'References']
             structure.classList = 'header__tabList';
 
             // Adds the tab content to the container
@@ -53,9 +54,9 @@ const headerManager = Object.create(null, {
     navigateTabs: {
         value: function (e) {
             // Selecting the default active tab (friends)
-            let $activeTab = $('#Friends');
-            let $activeLabel = $('#Friends')[0].childNodes[0];
-            let $activeCounter = $('#Friends')[0].childNodes[1];
+            let $activeTab = $('#Overview');
+            let $activeLabel = $('#Overview')[0].childNodes[0];
+            let $activeCounter = $('#Overview')[0].childNodes[1];
 
             // If a tab has been clicked, it toggles active tab
             if (e) {
@@ -81,7 +82,7 @@ const headerManager = Object.create(null, {
     addButton: {
         value: function () {
             // Creating a button via buttonFactory
-            const button = buttonFactory('header__button', 'Add new', headerManager.createDropdown)
+            const button = buttonFactory('header__button', 'Contact me', headerManager.createDropdown)
             button.innerHTML += `<img src='img/arrow-down.svg'>`;
             return button;
         }
@@ -93,7 +94,7 @@ const headerManager = Object.create(null, {
             const $body = $('body')
 
             // Requirements for dropdownFactory
-            const options = ['Friend', 'Event', 'Article', 'Task']
+            const options = ['Email', 'Dribbble', 'LinkedIn', 'GitHub', 'Medium']
             const optionEvent = 'modal';
             const button = $('.header__button');
             const event = (function() {

@@ -5,7 +5,7 @@ module.exports = function (grunt) {
         watch: {
             scripts: {
                 files: [
-                    "./scripts/**/",
+                    "./scripts/**/*.js",
                     "./index.html",
                     "./styles/**/*.css",
                     "./img/**/",
@@ -40,6 +40,7 @@ module.exports = function (grunt) {
             main: {
                 files: [
                     // includes files within path
+
                     { expand: true, src: ['index.html'], dest: '../dist/', filter: 'isFile' },
                     { expand: true, src: ['styles/*css'], dest: '../dist/', filter: 'isFile' },
                     { expand: true, src: ['scripts/*js'], dest: '../dist/', filter: 'isFile' },
