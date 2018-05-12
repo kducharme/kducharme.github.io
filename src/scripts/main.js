@@ -3,9 +3,9 @@ const experienceManager = require('./interface/experienceManager');
 const navManager = require('./interface/navManager');
 const modalManager = require('./modal/modalManager');
 
-modalManager.mWarning();
+// modalManager.mWarning();
 headerManager.createStructure();
-headerManager.navigateTabs();
+headerManager.headerTitle();
 experienceManager.experienceBlock();
 navManager.navStructure();
 

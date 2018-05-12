@@ -1,5 +1,6 @@
 const $ = require('jquery');
 const $printArea = $('#side');
+const headerManager = require('./headerManager');
 
 // Manages the friend view
 const navManager = Object.create(null, {
@@ -47,7 +48,9 @@ const navManager = Object.create(null, {
             links.forEach(link => {
                 $link = $('<p>');
                 $link.on('click', function(e) {
-                    console.log('woo')
+                    $('.activeTab').empty();
+                    const active = e.target.textContent;
+                    headerManager.headerTitle(active);
                 })
                 $link.text(link)
                 $link.addClass('sidenav__link')
@@ -63,7 +66,9 @@ const navManager = Object.create(null, {
             links.forEach(link => {
                 $link = $('<p>');
                 $link.on('click', function(e) {
-                    console.log('woo')
+                    $('.activeTab').empty();
+                    const active = e.target.textContent;
+                    headerManager.headerTitle(active);
                 })
                 $link.text(link)
                 $link.addClass('sidenav__link')
