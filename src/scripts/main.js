@@ -4,5 +4,5 @@ const navManager = require('./interface/navManager');
 
 headerManager.createStructure();
 headerManager.navigateTabs();
-
 experienceManager.experienceBlock();
+navManager.navStructure();

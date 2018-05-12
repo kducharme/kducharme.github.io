@@ -95,6 +95,9 @@ nav > p {
 }
 
 .content__nav {
+    display: flex;
+    flex-direction: column;
+    padding: 80px 40px 30px 40px;
     width: 280px;
     height: calc(100vh);
     border-right: 1px solid var(--borderColor);
