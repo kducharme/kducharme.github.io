@@ -6,7 +6,6 @@ const modalFactory = require('../factories/modalFactory');
 const headerManager = Object.create(null, {
     createStructure: {
         value: function () {
-            console.log('hey');
             // Creates the header structure
             const fragment = document.createDocumentFragment();
             const structure = document.createElement('span');
@@ -25,7 +24,7 @@ const headerManager = Object.create(null, {
         value: function () {
             // Creates the container for the tabs
             const structure = document.createElement('span');
-            const tabs = ['Overview']
+            const tabs = ['About']
             structure.classList = 'header__tabList';
 
             // Adds the tab content to the container
@@ -42,7 +41,7 @@ const headerManager = Object.create(null, {
 
                 const counter = document.createElement('p');
                 counter.classList = 'header__tabList--counter'
-                counter.textContent = headerManager.countTabs();
+                counter.textContent = 'Active'
                 
                 block.appendChild(tabName)
                 block.appendChild(counter)
@@ -54,9 +53,9 @@ const headerManager = Object.create(null, {
     navigateTabs: {
         value: function (e) {
             // Selecting the default active tab (friends)
-            let $activeTab = $('#Overview');
-            let $activeLabel = $('#Overview')[0].childNodes[0];
-            let $activeCounter = $('#Overview')[0].childNodes[1];
+            let $activeTab = $('#About');
+            let $activeLabel = $('#About')[0].childNodes[0];
+            let $activeCounter = $('#About')[0].childNodes[1];
 
             // If a tab has been clicked, it toggles active tab
             if (e) {
@@ -70,13 +69,6 @@ const headerManager = Object.create(null, {
             $('.header__tabList--counter').removeClass('activeCounter');
             $activeLabel.classList.add('activeTab');
             $activeCounter.classList.add('activeCounter');
-        }
-    },
-    countTabs: {
-        // TODO -- HOOK UP FILTER COUNTERS
-        value: function () {
-            const count = Math.floor(Math.random() * 10);
-            return count;
         }
     },
     addButton: {

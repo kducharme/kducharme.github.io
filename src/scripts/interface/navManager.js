@@ -2,21 +2,27 @@ const $ = require('jquery');
 const $printArea = $('#side');
 
 // Manages the friend view
-const experienceManager = Object.create(null, {
-    experienceBlock: {
+const navManager = Object.create(null, {
+    navStructure: {
         value: function () {
             const $structure = $('<span>');
             $structure.addClass('experience');
 
-            // Gets list of friends & messages
-            const $experienceAbout = experienceManager.experienceOverview();
-            const $experienceSkills = experienceManager.experienceSkills();
-
-            // Appends everything to section
-            $structure.append($experienceAbout, $experienceSkills);
-            $printArea.append($structure);
         }
-    }
+    },
+    navHeader: {
+        value: function () {
+            const $structure = $('<span>');
+
+        }
+    },
+    navLinks: {
+        value: function () {
+            const $structure = $('<span>');
+            const links = ['About Me', 'Past Roles', 'Technical Skills']
+
+        }
+    },
 })
 
-module.exports = experienceManager;
+module.exports = navManager;

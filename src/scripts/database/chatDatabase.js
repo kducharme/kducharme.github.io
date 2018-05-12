@@ -8,7 +8,6 @@ const chatDatabase = Object.create(null, {
     },
     createFriend: {
         value: function () {
-            console.log('woo woo - friend added')
             // $.ajax({
             //     url: 'https://nutshell-kd.firebaseio.com/friends/',
             //     method: 'POST'

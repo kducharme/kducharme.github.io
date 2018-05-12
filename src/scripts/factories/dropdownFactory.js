@@ -33,7 +33,7 @@ const dropdownFactory = (button, options, eventListener, addLeft, addTop, option
                 option.setAttribute('target', '_blank');
                 break;
             case 'LinkedIn':
-                link = 'https://dribbble.com/kducharme'
+                link = 'https://www.linkedin.com/in/kyleducharme/'
                 option.setAttribute('target', '_blank');
                 break;
             case 'GitHub':
