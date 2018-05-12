@@ -18,13 +18,29 @@
 <body>
     <nav>
         <img class='logo' src='./img/logoalt.png'>
-        <p>ducharme.kyle@gmail.com <span class='dot'> &middot </span>774.230.5142</p>
+        <p>ducharme.kyle@gmail.com
+            <span class='dot'> &middot </span>774.230.5142</p>
     </nav>
 
     <section id='content' class='content'>
         <section id='side' class='content__nav'></section>
         <section id='primary' class='content__data'></section>
     </section>
+    <!-- <script src="https://www.gstatic.com/firebasejs/5.0.2/firebase.js"></script> -->
+    <script src="https://www.gstatic.com/firebasejs/5.0.2/firebase.js"></script>
+    
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyD_QIxphMMr3fnl1ZE1kBbdS-pROKmPeVE",
+            authDomain: "kd-site.firebaseapp.com",
+            databaseURL: "https://kd-site.firebaseio.com",
+            projectId: "kd-site",
+            storageBucket: "",
+            messagingSenderId: "587593700511"
+        };
+        firebase.initializeApp(config);
+    </script>
     <script src='./bundle.js'></script>
 </body>
 

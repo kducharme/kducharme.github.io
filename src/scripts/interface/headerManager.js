@@ -20,55 +20,26 @@ const headerManager = Object.create(null, {
             $printArea.append(fragment);
         }
     },
-    addTabs: {
+    headerTitle: {
         value: function () {
-            // Creates the container for the tabs
-            const structure = document.createElement('span');
-            const tabs = ['About']
-            structure.classList = 'header__tabList';
+            const tabs = $('.sidenav__link')
+            const $block = $('<span>');
+            $block.addClass('header__tabList--$block');
+            $block.attr('id', tab$)
 
-            // Adds the tab content to the container
-            tabs.forEach(tab => {
-                const block = document.createElement('span');
-                block.classList = 'header__tabList--block';
-                block.setAttribute('id', tab)
-                block.addEventListener('click', function(e) {
-                    headerManager.navigateTabs(e)
-                })
-                const tabName = document.createElement('p');
-                tabName.classList = 'header__tabList--label'
-                tabName.textContent = tab;
 
-                const counter = document.createElement('p');
-                counter.classList = 'header__tabList--counter'
-                counter.textContent = 'Active'
-                
-                block.appendChild(tabName)
-                block.appendChild(counter)
-                structure.appendChild(block)
-            })
-            return structure;
-        }
-    },
-    navigateTabs: {
-        value: function (e) {
-            // Selecting the default active tab (friends)
-            let $activeTab = $('#About');
-            let $activeLabel = $('#About')[0].childNodes[0];
-            let $activeCounter = $('#About')[0].childNodes[1];
+            const $tabName = $('<p>');
+            $tabName.classList = 'header__tabList--label'
+            $tabName.textContent = tab;
 
-            // If a tab has been clicked, it toggles active tab
-            if (e) {
-                $activeTab = e.currentTarget;
-                $activeLabel = $activeTab.childNodes[0];
-                $activeCounter = $activeTab.childNodes[1];
-            }
-
-            // Adds styling to the active tab
-            $('.header__tabList--label').removeClass('activeTab');
-            $('.header__tabList--counter').removeClass('activeCounter');
             $activeLabel.classList.add('activeTab');
             $activeCounter.classList.add('activeCounter');
+
+            block.appendChild(tabName)
+            block.appendChild(counter)
+            structure.appendChild(block)
+
+            return structure;
         }
     },
     addButton: {
@@ -89,7 +60,7 @@ const headerManager = Object.create(null, {
             const options = ['Email', 'Dribbble', 'LinkedIn', 'GitHub', 'Medium']
             const optionEvent = 'modal';
             const button = $('.header__button');
-            const event = (function() {
+            const event = (function () {
                 headerManager.closeDropdown();
             })
 

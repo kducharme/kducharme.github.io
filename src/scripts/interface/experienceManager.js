@@ -81,7 +81,7 @@ const experienceManager = Object.create(null, {
             
             const $additionalTitle = $('<p>');
             $additionalTitle.addClass('experience__add--title');
-            $additionalTitle.text('About this website')
+            $additionalTitle.text('My focus & expertise')
 
             const $additionalBody = $('<p>');
             $additionalBody.addClass('experience__add--body');
