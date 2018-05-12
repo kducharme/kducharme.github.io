@@ -1,6 +1,6 @@
 const $ = require('jquery');
 
-const modalFactory = (title, details, inputs, button) => {
+const modalFactory = (title, details, button) => {
     const $body = $('body');
 
     // Creates background structure
@@ -26,23 +26,6 @@ const modalFactory = (title, details, inputs, button) => {
     $details.text(details);
     $details.addClass('modal__content--details');
     $content.append($details);
-
-    // Modal inputs
-    const $form = $('<span>');
-    $form.addClass('modal__content--form');
-    inputs.forEach(input => {
-        const $label = $('<label>');
-        $label.text(input);
-        $label.addClass('modal__content--label');
-        $content.append($label);
-
-        const $input = $('<input>');
-        const id = input.split(' ')[0];
-        $input.attr('id', `id__${id}`);
-        $input.attr('placeholder', input);
-        $input.addClass('modal__content--input')
-        $content.append($input);
-    })
 
     // Appends button to modal
     $content.append(button);

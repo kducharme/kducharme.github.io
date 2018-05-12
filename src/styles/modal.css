@@ -56,10 +56,11 @@
 .modal__content--button {
     height: 40px;
     background-color: var(--accentColor);
-    width: 120px;
+    width: 150px;
     padding: 2px 16px 2px 16px;
     margin-top: 10px;
     float: right;
+    border-radius: 5px;
 }
 
 .modal__content--button:hover, .modal__content--button:active {
