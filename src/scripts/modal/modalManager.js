@@ -10,7 +10,7 @@ const modalManager = Object.create(null, {
     mWarning: {
         value: function () {
             // Creating arguments for modalFactory;
-            const title = 'Side under construction'
+            const title = 'Site under construction'
             const details = `Whelp, this is awkward. I'm currently developing the website, so feel free to poke around. But, be warned: there are 🐛's`;
             const button = buttonFactory('modal__content--button', 'Start exploring', (function () {
                 $('.modal__bg').remove();
