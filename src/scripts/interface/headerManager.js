@@ -7,39 +7,34 @@ const headerManager = Object.create(null, {
     createStructure: {
         value: function () {
             // Creates the header structure
-            const fragment = document.createDocumentFragment();
-            const structure = document.createElement('span');
-            structure.classList = 'header';
-            const button = headerManager.addButton();
-            const tabs = headerManager.addTabs();
+            const $structure = $('<span>')
+            $structure.addClass('header');
+
+            const $button = headerManager.addButton();
 
             // Appends components to the header
-            structure.appendChild(tabs)
-            structure.appendChild(button)
-            fragment.appendChild(structure)
-            $printArea.append(fragment);
+            $structure.append($button)
+            $printArea.append($structure);
         }
     },
     headerTitle: {
-        value: function () {
-            const tabs = $('.sidenav__link')
+        value: function (active) {
             const $block = $('<span>');
             $block.addClass('header__tabList--$block');
-            $block.attr('id', tab$)
 
+            let activeTab = 'About me';
+            
+            if (active) {
+                activeTab = active;
+            }
 
             const $tabName = $('<p>');
-            $tabName.classList = 'header__tabList--label'
-            $tabName.textContent = tab;
+            $tabName.addClass('header__tabList--label')
+            $tabName.addClass('activeTab')
+            $tabName.text(activeTab)
 
-            $activeLabel.classList.add('activeTab');
-            $activeCounter.classList.add('activeCounter');
-
-            block.appendChild(tabName)
-            block.appendChild(counter)
-            structure.appendChild(block)
-
-            return structure;
+            $block.append($tabName);
+            $('.header').append($block);
         }
     },
     addButton: {
