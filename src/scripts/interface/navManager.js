@@ -44,13 +44,16 @@ const navManager = Object.create(null, {
     navPages: {
         value: function () {
             const $structure = $('<span>');
-            const links = ['About Me', 'Resume & Education', 'Development Skills', 'References' ]
+            const links = ['About me', 'Resume & education', 'Development skills', 'References']
             links.forEach(link => {
                 $link = $('<p>');
+                $link.attr('id', link.split(' ')[0])
                 $link.on('click', function(e) {
                     $('.activeTab').empty();
                     const active = e.target.textContent;
+                    const activeId = e.target.id;
                     headerManager.headerTitle(active);
+                    navManager.navActive(activeId);
                 })
                 $link.text(link)
                 $link.addClass('sidenav__link')
@@ -65,16 +68,27 @@ const navManager = Object.create(null, {
             const links = ['Edgenet', 'Impactful', 'WaveFire', 'splitsecnd', 'ASP']
             links.forEach(link => {
                 $link = $('<p>');
+                $link.attr('id', link)
                 $link.on('click', function(e) {
                     $('.activeTab').empty();
                     const active = e.target.textContent;
+                    const activeId = e.target.id;
                     headerManager.headerTitle(active);
+                    navManager.navActive(activeId);
                 })
                 $link.text(link)
                 $link.addClass('sidenav__link')
                 $structure.append($link);
             })
             return $structure;
+        }
+    },
+    navActive: {
+        value: function (active) {
+            let activeNav = 'About';
+            if (active) { activeNav = active; }
+            $('.sidenav__link').removeClass('activeLink');
+            $(`#${activeNav}`).addClass('activeLink');
         }
     }
 })

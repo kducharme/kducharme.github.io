@@ -8,5 +8,6 @@ headerManager.createStructure();
 headerManager.headerTitle();
 experienceManager.experienceBlock();
 navManager.navStructure();
+navManager.navActive();
 
 //megggg

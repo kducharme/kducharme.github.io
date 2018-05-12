@@ -19,3 +19,9 @@
     cursor: pointer;
     color: var(--primaryColor);
 }
+
+/* Active styling */
+.activeLink {
+    font-weight: 600;
+    color: var(--primaryColor);
+}

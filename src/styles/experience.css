@@ -62,14 +62,14 @@
 
 .experience__skills--title {
     margin: 0;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 800;
     padding-bottom: 10px;
 }
 
 .experience__skills--body {
     margin: 0;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 400;
     line-height: 1.6;
     opacity: .8;
@@ -96,5 +96,14 @@
     opacity: .8;
     font-weight: 400;
     line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.experience__add--bodyAlt {
+    margin: 0;
+    font-size: 15px;
+    opacity: .8;
+    font-weight: 400;
+    line-height: 1.9;
     margin-bottom: 30px;
 }

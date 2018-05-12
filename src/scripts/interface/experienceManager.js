@@ -29,11 +29,11 @@ const experienceManager = Object.create(null, {
 
             const $aboutBody = $('<p>');
             $aboutBody.addClass('experience__about--body');
-            $aboutBody.text(`I'm a Nashville-based user experience (UX) and user interface (UI) designer with technical chops that loves bringing ideas to life. Over the past five years, I've been blessed with opportunities to build products that have helped keep drivers safer, businesses more efficient, and hospitals safer.`);
+            $aboutBody.text(`I'm a Nashville-based user experience (UX), user interface (UI) designer, and front-end developer that loves bringing ideas to life. Over the past five years, I've worked in a variety of roles that have allowed me to build products that have helped keep drivers safer, businesses more efficient, and hospitals safer. Now, I'm on a mission to partner with companies that build experiences that are engaging, thoughtful, and intuitive.`);
 
             const $aboutBodyTwo = $('<p>');
             $aboutBodyTwo.addClass('experience__about--bodyTwo');
-            $aboutBodyTwo.text(`Before that, I wore a variety of hats ranging from teacher 👨‍🏫 to ballroom dance instructor 💃 to contsruction manager 👷‍♂️  to coffee importer ☕️. Luckily, although these roles weren't focusing on product design, they helped shape how I connect, teach, communicate, learn, and grow, which are integral parts of being a designer.`);
+            $aboutBodyTwo.text(`Before focusing on product design full-time, I wore a variety of hats ranging from teacher 👨‍🏫 to ballroom dance instructor 💃 to contsruction manager 👷‍♂️  to coffee importer ☕️. Luckily, although these roles weren't focusing on product design, they helped shape how I connect, teach, communicate, learn, and grow, which are integral parts of being a designer.`);
 
             $about.append($aboutTitle, $aboutBody, $aboutBodyTwo);
             return $about;
@@ -81,11 +81,11 @@ const experienceManager = Object.create(null, {
             
             const $additionalTitle = $('<p>');
             $additionalTitle.addClass('experience__add--title');
-            $additionalTitle.text('My focus & expertise')
+            $additionalTitle.text('My focus')
 
             const $additionalBody = $('<p>');
-            $additionalBody.addClass('experience__add--body');
-            $additionalBody.text(`I built this website (from scratch) to dive deeper into my experiences and the value that I bring as designer and developer via case studies, mockups, prototypes, and more. This website was built for...you. So, if there's anything that's mission from this website that you'd like to learn more about, I'm all ears. Happy reading!`);
+            $additionalBody.addClass('experience__add--bodyAlt');
+            $additionalBody.text(`My focus is on extracting frustrations, opportunities, and innefficiencies and building experiences that are engaging, thoughtful, intuitive, and delightful. I believe that effective design is deeper than a beautiful UI (although that's part of it), and that shipped is better than perfect. If you're looking for a designer and developer that loves designing experiences and focuses on bringing products & features to market, let's chat.`);
 
             $additional.append($additionalTitle, $additionalBody);
             return $additional;
