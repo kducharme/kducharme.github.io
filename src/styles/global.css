@@ -88,17 +88,17 @@ nav > p {
 .content__data {
     display: flex;
     flex-direction: column;
-    width: calc(100vw - 280px);
+    width: calc(100vw - 220px);
     overflow: scroll;
     right: 0;
-    margin: 50px 0 0 300px;
+    margin: 50px 30px 0 330px;
 }
 
 .content__nav {
     display: flex;
     flex-direction: column;
     padding: 80px 40px 30px 40px;
-    width: 280px;
+    width: 220px;
     height: calc(100vh);
     border-right: 1px solid var(--borderColor);
     background-color: var(--fillColor);

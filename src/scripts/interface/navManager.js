@@ -13,22 +13,23 @@ const navManager = Object.create(null, {
 
             // Gets content to populate side nav
             const $header = navManager.navHeader();
+            
             $pagesLinks = navManager.navPages();
             $studiesLinks = navManager.navStudies();
 
             // Appends primary pages (header + links)
-            $pages.append($header['PAGES'][0].textContent, $pagesLinks)
+            $pages.append($header['Pages'], $pagesLinks);
 
             // Appends case studies (header + links)
-            $caseStudies.append($header['CASE STUDIES'][0].textContent, $studiesLinks)
+            $caseStudies.append($header['Case studies'], $studiesLinks);
 
             // Appends pages and case studies to page
-            $printArea.append($pages, $caseStudies)
+            $printArea.append($pages, $caseStudies);
         }
     },
     navHeader: {
         value: function () {
-            const titles = ['PAGES', 'CASE STUDIES']
+            const titles = ['Pages', 'Case studies'];
             let headers = {};
             titles.forEach(t => {
                 const $head = $('<p>');
@@ -42,7 +43,7 @@ const navManager = Object.create(null, {
     navPages: {
         value: function () {
             const $structure = $('<span>');
-            const links = ['About Me', 'Past Roles', 'Dev Skills', 'References' ]
+            const links = ['About Me', 'Resume & Education', 'Development Skills', 'References' ]
             links.forEach(link => {
                 $link = $('<p>');
                 $link.on('click', function(e) {
