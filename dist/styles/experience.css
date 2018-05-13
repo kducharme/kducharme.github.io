@@ -3,7 +3,6 @@
     flex-direction: column;
     margin: 20px 140px 0 140px;
     display: flex;
-    border-radius: 3px;
 }
 
 /* Overview section */
@@ -12,21 +11,6 @@
     padding: 20px 0 30px 0;
     border-radius: 5px;
     margin-bottom: 20px;
-}
-
-.experience__about--title {
-    margin: 0;
-    font-size: 28px;
-    font-weight: 800;
-    padding-bottom: 18px;
-}
-
-.experience__about--body {
-    margin: 0;
-    font-size: 15px;
-    opacity: .8;
-    font-weight: 400;
-    line-height: 1.7;
 }
 
 .experience__about--bodyTwo {
@@ -83,27 +67,11 @@
     margin-bottom: 20px;
 }
 
-.experience__add--title {
-    margin: 0;
-    font-size: 18px;
-    font-weight: 800;
-    padding-bottom: 18px;
-}
-
 .experience__add--body {
     margin: 0;
     font-size: 15px;
     opacity: .8;
     font-weight: 400;
     line-height: 1.7;
-    margin-bottom: 30px;
-}
-
-.experience__add--bodyAlt {
-    margin: 0;
-    font-size: 15px;
-    opacity: .8;
-    font-weight: 400;
-    line-height: 1.9;
     margin-bottom: 30px;
 }

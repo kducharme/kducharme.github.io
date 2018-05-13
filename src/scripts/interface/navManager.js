@@ -54,6 +54,7 @@ const navManager = Object.create(null, {
                     const activeId = e.target.id;
                     headerManager.headerTitle(active);
                     navManager.navActive(activeId);
+                    navManager.navShowContent(activeId)
                 })
                 $link.text(link)
                 $link.addClass('sidenav__link')
@@ -86,9 +87,39 @@ const navManager = Object.create(null, {
     navActive: {
         value: function (active) {
             let activeNav = 'About';
-            if (active) { activeNav = active; }
+            if (active) { activeNav = active };
             $('.sidenav__link').removeClass('activeLink');
             $(`#${activeNav}`).addClass('activeLink');
+        }
+    },
+    navShowContent: {
+        value: function (activeId) {
+            let activeBlock = 'About';
+            if (activeId) { activeBlock = activeId };
+            const resumeManager = require('../interface/resumeManager');
+            const devManager = require('../interface/devManager');
+            const refManager = require('../interface/refManager');
+            switch(activeBlock) {
+                case 'About':
+                    $('.experience').show();
+                    $('.resume, .development, .references, .edgenet, .splitsecnd, .impactful, .wavefire, .asp').hide();
+                    break;
+                case 'Resume':
+                    $('.resume').remove();
+                    resumeManager.resumeBlock();
+                    $('.experience, .development, .references, .edgenet, .splitsecnd, .impactful, .wavefire, .asp').hide();
+                    break;
+                case 'Development':
+                    $('.development').remove();
+                    devManager.devBlock();
+                    $('.experience, .resume, .references, .edgenet, .splitsecnd, .impactful, .wavefire, .asp').hide();
+                    break;
+                case 'References':
+                    $('.references').remove();
+                    refManager.refBlock();
+                    $('.experience, .resume, .development, .edgenet, .splitsecnd, .impactful, .wavefire, .asp').hide();
+                    break;
+            }
         }
     }
 })

@@ -106,3 +106,27 @@ nav > p {
     z-index: 998;
     left: 0;
 }
+
+/* Global page styling */
+
+.page__title {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 800;
+    padding-bottom: 18px;
+}
+
+.page__subtitle {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 800;
+    padding-bottom: 18px;
+}
+
+.page__body {
+    margin: 0;
+    font-size: 15px;
+    opacity: .8;
+    font-weight: 400;
+    line-height: 1.7;
+}
