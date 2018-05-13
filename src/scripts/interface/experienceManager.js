@@ -33,7 +33,7 @@ const experienceManager = Object.create(null, {
 
             const $aboutBodyTwo = $('<p>');
             $aboutBodyTwo.addClass('experience__about--bodyTwo');
-            $aboutBodyTwo.text(`Before focusing on product design full-time, I wore a variety of hats ranging from teacher 👨‍🏫 to ballroom dance instructor 💃 to contsruction manager 👷‍♂️  to coffee importer ☕️. Luckily, although these roles weren't focusing on product design, they helped shape how I connect, teach, communicate, learn, and grow, which are integral parts of being a designer.`);
+            $aboutBodyTwo.text(`Before focusing on product design full-time, I wore a variety of hats ranging from English teacher 👨‍🏫 to ballroom dance instructor 💃 to contsruction manager 👷‍♂️  to coffee importer ☕️. Luckily, although these roles weren't focusing on product design, they helped shape how I connect, teach, communicate, learn, and grow -- all integral parts of being a designer.`);
 
             $about.append($aboutTitle, $aboutBody, $aboutBodyTwo);
             return $about;
@@ -42,18 +42,18 @@ const experienceManager = Object.create(null, {
     experienceSkills: {
         value: function () {
             const $skills = $('<span>');
-            $skills.addClass('experience__skills');
+            $skills.addClass('skillsRow');
 
             // First skill
             const $skillOne = $('<span>');
             $skillOne.addClass('skill');
 
             const $skillOneTitle = $('<p>');
-            $skillOneTitle.addClass('experience__skills--title');
+            $skillOneTitle.addClass('skill__title');
             $skillOneTitle.text('User Experience Design')
 
             const $skillOneBody = $('<p>');
-            $skillOneBody.addClass('experience__skills--body');
+            $skillOneBody.addClass('skill__body');
             $skillOneBody.text(`From small startups to Fortune 50 brands, I've led design teams building products that are helping make businesses and people more effective.`)
             $skillOne.append($skillOneTitle, $skillOneBody);
             
@@ -62,11 +62,11 @@ const experienceManager = Object.create(null, {
             $skillTwo.addClass('skill')
 
             const $skillTwoTitle = $('<p>');
-            $skillTwoTitle.addClass('experience__skills--title');
+            $skillTwoTitle.addClass('skill__title');
             $skillTwoTitle.text('Front-End Development')
 
             const $skillTwoBody = $('<p>');
-            $skillTwoBody.addClass('experience__skills--body');
+            $skillTwoBody.addClass('skill__body');
             $skillTwoBody.text(`Beyond a pixel perfect mockup, I work to build ideas to live through development, utilizing HTMl, CSS, and JavaScript (plus React & jQuery)`)
             $skillTwo.append($skillTwoTitle, $skillTwoBody);
             

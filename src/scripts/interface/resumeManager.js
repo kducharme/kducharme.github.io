@@ -34,7 +34,7 @@ const resumeManager = Object.create(null, {
 
             const $detailsBody = $('<p>');
             $detailsBody.addClass('page__body');
-            $detailsBody.text(`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`);
+            $detailsBody.text(`Back in 2010, I paused my college experience and spent 12 months managing thousands of volunteers rebuilding homes for non-profits around the US. During that time, I fell in love with creating experiences that are thoughtful, memorable, engaging, and simple. Now, more than seven years later, I'm still focusing on creating the best experience for customers (just with more of a focus on digital UX).`);
 
             $details.append($detailsTitle, $detailsBody);
             return $details;
