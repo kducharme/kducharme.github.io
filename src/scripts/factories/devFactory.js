@@ -1,7 +1,7 @@
 const $ = require('jquery');
 
 const devFactory = (oneTitle, oneBody, twoTitle, twoBody) => {
-    const $row = $('<span>').addClass('skillsRow');
+    const $row = $('<span>').addClass('skillsRowAlt');
 
     // Skill one block
     const $skillOne = $('<span>')
