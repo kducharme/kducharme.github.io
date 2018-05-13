@@ -24,11 +24,11 @@ const experienceManager = Object.create(null, {
             $about.addClass('experience__about');
 
             const $aboutTitle = $('<p>');
-            $aboutTitle.addClass('experience__about--title');
+            $aboutTitle.addClass('page__title');
             $aboutTitle.text('Hi, my name is Kyle.')
 
             const $aboutBody = $('<p>');
-            $aboutBody.addClass('experience__about--body');
+            $aboutBody.addClass('page__body');
             $aboutBody.text(`I'm a Nashville-based user experience (UX) designer, user interface (UI) designer, and front-end developer that loves bringing ideas to life. Over the past five years, I've worked in a variety of roles that have allowed me to build products that have helped keep drivers safer, businesses more efficient, and hospitals safer. Now, I'm on a mission to partner with companies that build experiences that are engaging, thoughtful, and intuitive.`);
 
             const $aboutBodyTwo = $('<p>');
@@ -80,11 +80,11 @@ const experienceManager = Object.create(null, {
             $additional.addClass('experience__add');
             
             const $additionalTitle = $('<p>');
-            $additionalTitle.addClass('experience__add--title');
+            $additionalTitle.addClass('page__subtitle');
             $additionalTitle.text('My focus')
 
             const $additionalBody = $('<p>');
-            $additionalBody.addClass('experience__add--bodyAlt');
+            $additionalBody.addClass('page__body');
             $additionalBody.text(`My focus is on extracting frustrations, opportunities, and innefficiencies and building experiences that are engaging, thoughtful, intuitive, and delightful. I believe that effective design is deeper than a beautiful UI (although that's part of it), and that shipped is better than perfect. If you're looking for a designer and developer that loves designing experiences and focuses on bringing products & features to market, let's chat.`);
 
             $additional.append($additionalTitle, $additionalBody);

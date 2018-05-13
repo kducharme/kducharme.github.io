@@ -13,7 +13,7 @@ const resumeFactory = (company, role, details) => {
     $role.text(role);
 
     const $details = $('<p>');
-    $details.addClass('resume__exp--details')
+    $details.addClass('page__body')
     $details.text(details);
 
     $structure.append($role, $company, $details);

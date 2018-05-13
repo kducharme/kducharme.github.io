@@ -12,4 +12,3 @@ navManager.navActive();
 navManager.navShowContent();
 
 experienceManager.experienceBlock();
-// resumeManager.resumeBlock();
