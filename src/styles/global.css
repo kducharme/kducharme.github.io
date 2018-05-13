@@ -131,11 +131,28 @@ nav > p {
     line-height: 1.7;
 }
 
+.page__body--two {
+    margin: 20px 0 0 0;
+    font-size: 15px;
+    opacity: .8;
+    font-weight: 400;
+    line-height: 1.7;
+}
+
 /* Skills blocks */
 
 .skillsRow {
     display: flex;
     justify-content: space-between;
+}
+
+.skillsRowAlt {
+    display: flex;
+    justify-content: space-between;
+}
+
+.skillsRowAlt:last-child {
+    margin-bottom: 40px;
 }
 
 .skill {
@@ -178,3 +195,26 @@ nav > p {
     line-height: 1.6;
     opacity: .8;
 }
+
+/* Global case study */
+
+.edgenet, .splitsecnd, .wavefire, .splitsecnd, .asp, .impactful {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 140px 0 140px;
+    display: flex;
+}
+
+.case__img {
+    width: 100%;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 1px 8px 0 rgba(0,0,0,0.15);
+}
+
+.case__img:last-child {
+    margin-bottom: 50px;
+}
+
+
+

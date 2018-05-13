@@ -31,7 +31,11 @@ const devManager = Object.create(null, {
 
             const $detailsBody = $('<p>');
             $detailsBody.addClass('page__body');
-            $detailsBody.text(`My experience with software development commenced when I started designing websites for clients back in 2013. From messing around with CSS to optimizing HTML for SEO, it exposed me to the power of code. Now, with the help amazing mentors (and a lot of coffee), I'm a front-end developer that's focused on building pixel perfect UI's and seamless experiences.`);
+            $detailsBody.html(`My experience with software development commenced when I started designing websites for clients back in 2013. From messing around with CSS to optimizing HTML for SEO, it exposed me to the power of code. Now, with the help amazing mentors (and a lot of coffee), I'm a front-end developer that's focused on building pixel perfect UI's and seamless experiences. View samples:</br></br>
+            <a href='https://github.com/kducharme' target='_blank'>GitHub Profile</a></br></br>
+            <a href='https://slack-kd.firebaseapp.com/' target='_blank'>Sample Project Rebuilding Slack</a>
+
+            `);
 
             $details.append($detailsTitle, $detailsBody);
             return $details;

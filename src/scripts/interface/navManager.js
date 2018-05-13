@@ -22,7 +22,7 @@ const navManager = Object.create(null, {
             $pages.append($header['Pages'], $pagesLinks);
 
             // Appends case studies (header + links)
-            $caseStudies.append($header['Case studies'], $studiesLinks);
+            $caseStudies.append($header['Sample work'], $studiesLinks);
 
             // Appends pages and case studies to page
             $printArea.append($pages, $caseStudies);
@@ -30,7 +30,7 @@ const navManager = Object.create(null, {
     },
     navHeader: {
         value: function () {
-            const titles = ['Pages', 'Case studies'];
+            const titles = ['Pages', 'Sample work'];
             let headers = {};
             titles.forEach(t => {
                 const $head = $('<p>');
@@ -76,6 +76,7 @@ const navManager = Object.create(null, {
                     const activeId = e.target.id;
                     headerManager.headerTitle(active);
                     navManager.navActive(activeId);
+                    navManager.navShowContent(activeId)
                 })
                 $link.text(link)
                 $link.addClass('sidenav__link')
@@ -99,6 +100,11 @@ const navManager = Object.create(null, {
             const resumeManager = require('../interface/resumeManager');
             const devManager = require('../interface/devManager');
             const refManager = require('../interface/refManager');
+            const edgeManager = require('../interface/edgeManager');
+            const impactfulManager = require('../interface/impactfulManager');
+            const waveManager = require('../interface/waveManager');
+            const splitManager = require('../interface/splitManager');
+            const aspManager = require('../interface/aspManager');
             switch(activeBlock) {
                 case 'About':
                     $('.experience').show();
@@ -118,6 +124,31 @@ const navManager = Object.create(null, {
                     $('.references').remove();
                     refManager.refBlock();
                     $('.experience, .resume, .development, .edgenet, .splitsecnd, .impactful, .wavefire, .asp').hide();
+                    break;
+                case 'Edgenet':
+                    $('.edgenet').remove();
+                    edgeManager.caseBlock();
+                    $('.experience, .resume, .development, .references, .splitsecnd, .impactful, .wavefire, .asp').hide();
+                    break;
+                case 'Impactful':
+                    $('.impactful').remove();
+                    impactfulManager.caseBlock();
+                    $('.experience, .resume, .development, .references, .splitsecnd, .edgenet, .wavefire, .asp').hide();
+                    break;
+                case 'WaveFire':
+                    $('.wavefire').remove();
+                    waveManager.caseBlock();
+                    $('.experience, .resume, .development, .references, .splitsecnd, .impactful, .edgenet, .asp').hide();
+                    break;
+                case 'splitsecnd':
+                    $('.splitsecnd').remove();
+                    splitManager.caseBlock();
+                    $('.experience, .resume, .development, .references, .edgenet, .impactful, .edgenet, .asp').hide();
+                    break;
+                case 'ASP':
+                    $('.asp').remove();
+                    aspManager.caseBlock();
+                    $('.experience, .resume, .development, .references, .edgenet, .impactful, .edgenet, .splitsecnd').hide();
                     break;
             }
         }
