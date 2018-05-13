@@ -66,8 +66,8 @@
     align-items: center;
     height: 40px;
     background-color: var(--accentColor);
-    width: 140px;
-    padding: 2px 16px 2px 16px;
+    width: 130px;
+    padding: 2px 14px 2px 14px;
 }
 
 .header__button:hover {

@@ -11,6 +11,7 @@ const devManager = Object.create(null, {
 
             // Gets intro and resume entries
             const $intro = devManager.devIntro();
+            const $rowOne = devManager.devRowOne();
 
             // Appends everything to section
             $structure.append($intro);
@@ -23,27 +24,40 @@ const devManager = Object.create(null, {
             $details.addClass('resume__details');
 
             const $detailsTitle = $('<p>');
-            $detailsTitle.addClass('resume__details--title');
-            $detailsTitle.text('Experiences.')
+            $detailsTitle.addClass('page__title');
+            $detailsTitle.text('Front-end development')
 
             const $detailsBody = $('<p>');
-            $detailsBody.addClass('resume__details--body');
-            $detailsBody.text(`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`);
+            $detailsBody.addClass('page__body');
+            $detailsBody.text(`My experience with software development commenced when I started designing websites for clients back in 2013. From messing around with CSS to optimizing HTML for SEO, it exposed me to the power of code. Now, with the help amazing mentors (and a lot of coffee), I'm a front-end developer that's focused on building pixel perfect UI's and seamless experiences.`);
 
             $details.append($detailsTitle, $detailsBody);
             return $details;
         }
     },
-    resumeOne: {
+    devRowOne: {
         value: function () {
-            const company = 'kyleducharme.com';
-            const role = 'UX/UI Design Consultant';
-            const details = `Conceptualizing, launching, and scaling products alongside partners via end-to-end product design and front-end development. Partners range from seed-stage startups launching a product to growth-stage companies with thousands of users. Example projects include leading the re-design of a product content platform utilized by 8,000 enterprise companies, designing a HIPAA compliance platform alongside founders to raise VC funding, and designing an open-source program management platform for non-profits.`
-            const experience = resumeFactory(comapny, role, details)
 
-            return experience;
+            skillOneTitle= 'HTML';
+            skillOneBody = 'Writing easy-to-read, SEO-optimized HTML as a building block for a web app.';
+
+            skillTwoTitle= 'CSS';
+            skillTwoBody = `Utilizing vanilla CSS and libraries to develop pixel-perfect, interactive UI'.`;
+
+
+            const $skillTwoTitle = $('<p>');
+            $skillTwoTitle.addClass('experience__skills--title');
+            $skillTwoTitle.text('CSS')
+
+            const $skillTwoBody = $('<p>');
+            $skillTwoBody.addClass('experience__skills--body');
+            $skillTwoBody.text(``)
+            $skillTwo.append($skillTwoTitle, $skillTwoBody);
+            
+            $skills.append($skillOne, $skillTwo);
+            return $skills;
         }
-    }
+    },
 })
 
 module.exports = devManager;
