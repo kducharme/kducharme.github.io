@@ -44,7 +44,7 @@ const navManager = Object.create(null, {
     navPages: {
         value: function () {
             const $structure = $('<span>');
-            const links = ['About me', 'Resume & education', 'Development skills', 'References']
+            const links = ['About me', 'Resume & education', 'Development skills']
             links.forEach(link => {
                 $link = $('<p>');
                 $link.attr('id', link.split(' ')[0])

@@ -1,6 +1,6 @@
 const $ = require('jquery');
 const $printArea = $('#primary');
-const resumeFactory = require('../factories/resumeFactory');
+const devFactory = require('../factories/devFactory');
 
 // Manages the friend view
 const devManager = Object.create(null, {
@@ -12,9 +12,11 @@ const devManager = Object.create(null, {
             // Gets intro and resume entries
             const $intro = devManager.devIntro();
             const $rowOne = devManager.devRowOne();
+            const $rowTwo = devManager.devRowTwo();
+            const $rowThree = devManager.devRowThree();
 
             // Appends everything to section
-            $structure.append($intro);
+            $structure.append($intro, $rowOne, $rowTwo, $rowThree);
             $printArea.append($structure);
         }
     },
@@ -37,25 +39,35 @@ const devManager = Object.create(null, {
     },
     devRowOne: {
         value: function () {
+            oneTitle= 'HTML';
+            oneBody = 'Writing readable, SEO-optimized HTML as a building block for apps';
+            twoTitle= 'CSS';
+            twoBody = `Utilizing vanilla CSS and libraries to develop pixel-perfect, interactive UI's`;
 
-            skillOneTitle= 'HTML';
-            skillOneBody = 'Writing easy-to-read, SEO-optimized HTML as a building block for a web app.';
+            const $row = devFactory(oneTitle, oneBody, twoTitle, twoBody)
+            return $row;
+        }
+    },
+    devRowTwo: {
+        value: function () {
+            oneTitle= 'JavaScript';
+            oneBody = 'Bringing a web app to life with vanilla JS, jQuery, and React';
+            twoTitle= 'Git & GitHub';
+            twoBody = `Managing source control locally and collaboratively with colleagues`;
 
-            skillTwoTitle= 'CSS';
-            skillTwoBody = `Utilizing vanilla CSS and libraries to develop pixel-perfect, interactive UI'.`;
+            const $row = devFactory(oneTitle, oneBody, twoTitle, twoBody)
+            return $row;
+        }
+    },
+    devRowThree: {
+        value: function () {
+            oneTitle= 'Grunt';
+            oneBody = 'Managing tasks and automating the development process with Grunt and other apps';
+            twoTitle= 'SQL/NoSQL';
+            twoBody = `Leveraging data to design the most useful experiences for users`;
 
-
-            const $skillTwoTitle = $('<p>');
-            $skillTwoTitle.addClass('experience__skills--title');
-            $skillTwoTitle.text('CSS')
-
-            const $skillTwoBody = $('<p>');
-            $skillTwoBody.addClass('experience__skills--body');
-            $skillTwoBody.text(``)
-            $skillTwo.append($skillTwoTitle, $skillTwoBody);
-            
-            $skills.append($skillOne, $skillTwo);
-            return $skills;
+            const $row = devFactory(oneTitle, oneBody, twoTitle, twoBody)
+            return $row;
         }
     },
 })
