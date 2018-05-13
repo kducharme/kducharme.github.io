@@ -29,7 +29,7 @@ const experienceManager = Object.create(null, {
 
             const $aboutBody = $('<p>');
             $aboutBody.addClass('experience__about--body');
-            $aboutBody.text(`I'm a Nashville-based user experience (UX), user interface (UI) designer, and front-end developer that loves bringing ideas to life. Over the past five years, I've worked in a variety of roles that have allowed me to build products that have helped keep drivers safer, businesses more efficient, and hospitals safer. Now, I'm on a mission to partner with companies that build experiences that are engaging, thoughtful, and intuitive.`);
+            $aboutBody.text(`I'm a Nashville-based user experience (UX) designer, user interface (UI) designer, and front-end developer that loves bringing ideas to life. Over the past five years, I've worked in a variety of roles that have allowed me to build products that have helped keep drivers safer, businesses more efficient, and hospitals safer. Now, I'm on a mission to partner with companies that build experiences that are engaging, thoughtful, and intuitive.`);
 
             const $aboutBodyTwo = $('<p>');
             $aboutBodyTwo.addClass('experience__about--bodyTwo');
