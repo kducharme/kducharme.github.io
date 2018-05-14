@@ -311,6 +311,10 @@ nav > p {
         margin-bottom: 10px;
         padding-bottom: 0px;
     }
+
+    .sidenav__header {
+        padding-top: 20px;
+    }
     
   }
 
