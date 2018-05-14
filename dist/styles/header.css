@@ -26,37 +26,11 @@
     min-width: 120px;
 }
 
-.header__tabList--block:hover {
-    cursor: pointer;
-}
-
-.header__tabList--counter {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 12px;
-    font-weight: 600;
-    background-color: #E5E8EC;
-    color: #888EA1;
-    padding: 0 10px 0 10px;
-    border-radius: 4px;
-    margin-left: 8px;
-}
-
-.header__tabList--label {
-    color: #888EA1;
-    font-size: 14px;
-}
-
 .activeTab {
     font-weight: 600;
     color: var(--secondaryColor);
 }
 
-.activeCounter {
-    background-color: var(--primaryColor);
-    color: white;
-}
 
 /* Add new button */
 

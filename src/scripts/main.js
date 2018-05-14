@@ -10,5 +10,6 @@ headerManager.headerTitle();
 navManager.navStructure();
 navManager.navActive();
 navManager.navShowContent();
+navManager.openMobileNav();
 
 experienceManager.experienceBlock();
