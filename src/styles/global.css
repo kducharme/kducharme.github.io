@@ -198,7 +198,7 @@ nav > p {
 
 /* Global case study */
 
-.edgenet, .splitsecnd, .wavefire, .splitsecnd, .asp, .impactful {
+.edgenet, .splitsecnd, .wavefire, .splitsecnd, .asp, .impactful, .samples {
     display: flex;
     flex-direction: column;
     margin: 20px 140px 0 140px;
@@ -209,6 +209,13 @@ nav > p {
     width: 100%;
     margin-bottom: 30px;
     border-radius: 10px;
+    box-shadow: 0 1px 8px 0 rgba(0,0,0,0.15);
+}
+
+.case__imgAlt {
+    width: 100%;
+    margin-bottom: 30px;
+    border-radius: 7px;
     box-shadow: 0 1px 8px 0 rgba(0,0,0,0.15);
 }
 
@@ -281,7 +288,7 @@ nav > p {
         display: none;
     }
 
-    .experience, .resume, .development, .edgenet, .splitsecnd, .asp, .impactful, .wavefire {
+    .experience, .resume, .development, .edgenet, .splitsecnd, .asp, .impactful, .wavefire, .samples {
         width: 95%;
         margin: 20px 10px 20px 10px;
     }

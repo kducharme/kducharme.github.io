@@ -25,7 +25,7 @@ const aspManager = Object.create(null, {
 
             const $detailsTitle = $('<p>');
             $detailsTitle.addClass('page__title');
-            $detailsTitle.text('Appalachia Service Project')
+            $detailsTitle.text('Volunteer Registration System')
 
             const $detailsBody = $('<p>');
             $detailsBody.addClass('page__body');

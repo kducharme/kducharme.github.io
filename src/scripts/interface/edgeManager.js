@@ -25,7 +25,7 @@ const edgeManager = Object.create(null, {
 
             const $detailsTitle = $('<p>');
             $detailsTitle.addClass('page__title');
-            $detailsTitle.text('Edgenet')
+            $detailsTitle.text('Product Content Platform')
 
             const $detailsBody = $('<p>');
             $detailsBody.addClass('page__body');

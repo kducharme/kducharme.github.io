@@ -47,7 +47,7 @@ const navManager = Object.create(null, {
     navPages: {
         value: function () {
             const $structure = $('<span>');
-            const links = ['About me', 'Resume & education', 'Development skills']
+            const links = ['About me', 'Design samples', 'Resume & education', 'Development skills']
             links.forEach(link => {
                 $link = $('<p>');
                 $link.attr('id', link.split(' ')[0])
@@ -110,50 +110,56 @@ const navManager = Object.create(null, {
             const waveManager = require('../interface/waveManager');
             const splitManager = require('../interface/splitManager');
             const aspManager = require('../interface/aspManager');
+            const sampleManager = require('../interface/sampleManager');
             switch (activeBlock) {
                 case 'About':
                     $('.experience').show();
-                    $('.resume, .development, .references, .edgenet, .splitsecnd, .impactful, .wavefire, .asp').hide();
+                    $('.resume, .development, .references, .edgenet, .splitsecnd, .impactful, .wavefire, .asp, .samples').hide();
                     break;
                 case 'Resume':
                     $('.resume').remove();
                     resumeManager.resumeBlock();
-                    $('.experience, .development, .references, .edgenet, .splitsecnd, .impactful, .wavefire, .asp').hide();
+                    $('.experience, .development, .references, .edgenet, .splitsecnd, .impactful, .wavefire, .asp, .samples').hide();
                     break;
                 case 'Development':
                     $('.development').remove();
                     devManager.devBlock();
-                    $('.experience, .resume, .references, .edgenet, .splitsecnd, .impactful, .wavefire, .asp').hide();
+                    $('.experience, .resume, .references, .edgenet, .splitsecnd, .impactful, .wavefire, .asp, .samples').hide();
                     break;
                 case 'References':
                     $('.references').remove();
                     refManager.refBlock();
-                    $('.experience, .resume, .development, .edgenet, .splitsecnd, .impactful, .wavefire, .asp').hide();
+                    $('.experience, .resume, .development, .edgenet, .splitsecnd, .impactful, .wavefire, .asp, .samples').hide();
                     break;
                 case 'Edgenet':
                     $('.edgenet').remove();
                     edgeManager.caseBlock();
-                    $('.experience, .resume, .development, .references, .splitsecnd, .impactful, .wavefire, .asp').hide();
+                    $('.experience, .resume, .development, .references, .splitsecnd, .impactful, .wavefire, .asp, .samples').hide();
                     break;
                 case 'Impactful':
                     $('.impactful').remove();
                     impactfulManager.caseBlock();
-                    $('.experience, .resume, .development, .references, .splitsecnd, .edgenet, .wavefire, .asp').hide();
+                    $('.experience, .resume, .development, .references, .splitsecnd, .edgenet, .wavefire, .asp, .samples').hide();
                     break;
                 case 'WaveFire':
                     $('.wavefire').remove();
                     waveManager.caseBlock();
-                    $('.experience, .resume, .development, .references, .splitsecnd, .impactful, .edgenet, .asp').hide();
+                    $('.experience, .resume, .development, .references, .splitsecnd, .impactful, .edgenet, .asp, .samples').hide();
                     break;
                 case 'splitsecnd':
                     $('.splitsecnd').remove();
                     splitManager.caseBlock();
-                    $('.experience, .resume, .development, .references, .edgenet, .impactful, .edgenet, .wavefire, .asp').hide();
+                    $('.experience, .resume, .development, .references, .edgenet, .impactful, .edgenet, .wavefire, .asp, .samples').hide();
                     break;
                 case 'ASP':
                     $('.asp').remove();
                     aspManager.caseBlock();
-                    $('.experience, .resume, .development, .references, .edgenet, .impactful, .edgenet,.wavefire, .splitsecnd').hide();
+                    $('.experience, .resume, .development, .references, .edgenet, .impactful, .edgenet,.wavefire, .splitsecnd, .samples').hide();
+                    break;
+                case 'Design':
+                    $('.samples').remove();
+                    sampleManager.caseBlock();
+                    $('.experience, .resume, .development, .references, .edgenet, .impactful, .edgenet,.wavefire, .splitsecnd, .asp').hide();
                     break;
             }
         }
