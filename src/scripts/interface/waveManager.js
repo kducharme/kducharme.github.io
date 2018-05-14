@@ -25,7 +25,7 @@ const waveManager = Object.create(null, {
 
             const $detailsTitle = $('<p>');
             $detailsTitle.addClass('page__title');
-            $detailsTitle.text('WaveFire')
+            $detailsTitle.text('HIPAA Compliance Platform')
 
             const $detailsBody = $('<p>');
             $detailsBody.addClass('page__body');

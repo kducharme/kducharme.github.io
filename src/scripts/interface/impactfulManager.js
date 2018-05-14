@@ -25,7 +25,7 @@ const impactfulManager = Object.create(null, {
 
             const $detailsTitle = $('<p>');
             $detailsTitle.addClass('page__title');
-            $detailsTitle.text('Impactful')
+            $detailsTitle.text('Non-Profit Management Platform')
 
             const $detailsBody = $('<p>');
             $detailsBody.addClass('page__body');
@@ -33,7 +33,7 @@ const impactfulManager = Object.create(null, {
 
             const $detailsBodyTwo = $('<p>');
             $detailsBodyTwo.addClass('page__body--two');
-            $detailsBodyTwo.html(`The primary user of the Impactful platform is a program/project manager that's required to manage projects (either finite projects or ongoing programs) and ensure that resources are being allocated in the most responsible way. Typically, users are either recent college graduates (primarily female with minimal experience) or late in their career (ages 50+ that change adverse). Due to this, the product needs to be extremely simple to ensure that the product is onboarded into the organization's workflow and not rejected by users.</br></br>Samples screens:`);
+            $detailsBodyTwo.html(`The primary user of the Impactful platform is a program/project manager that's required to manage projects (either finite projects or ongoing programs) and ensure that resources are being allocated in the most responsible way. Typically, users are either recent college graduates (primarily female with minimal experience) or late in their career (ages 50+ that change adverse). Due to this, the product needs to be extremely simple to ensure that the product is onboarded into the organization's workflow and not rejected by users.</br></br>Sample screens:`);
 
             $details.append($detailsTitle, $detailsBody, $detailsBodyTwo);
             return $details;

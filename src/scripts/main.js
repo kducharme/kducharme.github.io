@@ -4,7 +4,7 @@ const navManager = require('./interface/navManager');
 const modalManager = require('./modal/modalManager');
 const resumeManager = require('./interface/resumeManager');
 
-// modalManager.mWarning();
+modalManager.mWarning();
 headerManager.createStructure();
 headerManager.headerTitle();
 navManager.navStructure();
