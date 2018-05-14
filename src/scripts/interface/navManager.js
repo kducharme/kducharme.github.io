@@ -148,12 +148,12 @@ const navManager = Object.create(null, {
                 case 'splitsecnd':
                     $('.splitsecnd').remove();
                     splitManager.caseBlock();
-                    $('.experience, .resume, .development, .references, .edgenet, .impactful, .edgenet, .asp').hide();
+                    $('.experience, .resume, .development, .references, .edgenet, .impactful, .edgenet, .wavefire, .asp').hide();
                     break;
                 case 'ASP':
                     $('.asp').remove();
                     aspManager.caseBlock();
-                    $('.experience, .resume, .development, .references, .edgenet, .impactful, .edgenet, .splitsecnd').hide();
+                    $('.experience, .resume, .development, .references, .edgenet, .impactful, .edgenet,.wavefire, .splitsecnd').hide();
                     break;
             }
         }

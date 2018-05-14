@@ -45,9 +45,7 @@ body {
 /* Navigation */
 
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: inline-block;
     background-color: var(--secondaryColor);
     height: 50px;
     z-index: 999;
@@ -61,7 +59,8 @@ nav {
 .logo {
     height: 24px;
     width: auto;
-    margin-left: 40px;
+    margin: 12px 0 0 40px;
+    float: left;
 }
 
 nav > p {
@@ -70,7 +69,8 @@ nav > p {
     font-weight: 400;
     letter-spacing: .5px;
     opacity: .5;
-    margin-right: 40px;
+    margin: 15px 40px 0 0;
+    float: right;
 }
 
 .dot {
@@ -314,6 +314,13 @@ nav > p {
 
     .sidenav__header {
         padding-top: 20px;
+    }
+
+    .modal {
+        margin-top: 150px;
+        min-width: 280px;
+        width: 75%;
+        overflow: hidden;
     }
     
   }
