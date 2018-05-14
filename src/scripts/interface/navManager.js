@@ -6,6 +6,9 @@ const headerManager = require('./headerManager');
 const navManager = Object.create(null, {
     navStructure: {
         value: function () {
+
+            // navManager.mobileNav();
+
             const $pages = $('<span>');
             $pages.addClass('sidenav');
 
@@ -14,7 +17,7 @@ const navManager = Object.create(null, {
 
             // Gets content to populate side nav
             const $header = navManager.navHeader();
-            
+
             $pagesLinks = navManager.navPages();
             $studiesLinks = navManager.navStudies();
 
@@ -48,13 +51,14 @@ const navManager = Object.create(null, {
             links.forEach(link => {
                 $link = $('<p>');
                 $link.attr('id', link.split(' ')[0])
-                $link.on('click', function(e) {
+                $link.on('click', function (e) {
                     $('.activeTab').empty();
                     const active = e.target.textContent;
                     const activeId = e.target.id;
                     headerManager.headerTitle(active);
                     navManager.navActive(activeId);
                     navManager.navShowContent(activeId)
+                    navManager.closeAfterClick();
                 })
                 $link.text(link)
                 $link.addClass('sidenav__link')
@@ -70,13 +74,14 @@ const navManager = Object.create(null, {
             links.forEach(link => {
                 $link = $('<p>');
                 $link.attr('id', link)
-                $link.on('click', function(e) {
+                $link.on('click', function (e) {
                     $('.activeTab').empty();
                     const active = e.target.textContent;
                     const activeId = e.target.id;
                     headerManager.headerTitle(active);
                     navManager.navActive(activeId);
                     navManager.navShowContent(activeId)
+                    navManager.closeAfterClick();
                 })
                 $link.text(link)
                 $link.addClass('sidenav__link')
@@ -105,7 +110,7 @@ const navManager = Object.create(null, {
             const waveManager = require('../interface/waveManager');
             const splitManager = require('../interface/splitManager');
             const aspManager = require('../interface/aspManager');
-            switch(activeBlock) {
+            switch (activeBlock) {
                 case 'About':
                     $('.experience').show();
                     $('.resume, .development, .references, .edgenet, .splitsecnd, .impactful, .wavefire, .asp').hide();
@@ -150,6 +155,32 @@ const navManager = Object.create(null, {
                     aspManager.caseBlock();
                     $('.experience, .resume, .development, .references, .edgenet, .impactful, .edgenet, .splitsecnd').hide();
                     break;
+            }
+        }
+    },
+    openMobileNav: {
+        value: function () {
+            $('.menu').on('click', function () {
+                if ($('#side').css('display') === 'none') {
+                    $('#side').css('display', 'block')
+                    navManager.closeMobileNav();
+                }
+            })
+        }
+    },
+    closeMobileNav: {
+        value: function () {
+            $('.menu').on('click', function () {
+                $('#side').css('display', 'none')
+                navManager.openMobileNav();
+            })
+        }
+    },
+
+    closeAfterClick: {
+        value: function () {
+            if ($(window).width() < 500) {
+                $('#side').css('display', 'none')
             }
         }
     }

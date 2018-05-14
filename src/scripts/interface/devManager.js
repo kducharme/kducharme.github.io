@@ -33,7 +33,8 @@ const devManager = Object.create(null, {
             $detailsBody.addClass('page__body');
             $detailsBody.html(`My experience with software development commenced when I started designing websites for clients back in 2013. From messing around with CSS to optimizing HTML for SEO, it exposed me to the power of code. Now, with the help amazing mentors (and a lot of coffee), I'm a front-end developer that's focused on building pixel perfect UI's and seamless experiences. View samples:</br></br>
             <a href='https://github.com/kducharme' target='_blank'>GitHub Profile</a></br></br>
-            <a href='https://slack-kd.firebaseapp.com/' target='_blank'>Sample Project Rebuilding Slack</a>
+            <a href='https://slack-kd.firebaseapp.com/' target='_blank'>Sample project rebuilding Slack</a></br></br>
+            <a href='https://github.com/kducharme/website' target='_blank'>This website's repository</a>
 
             `);
 
