@@ -30,7 +30,7 @@ const resumeManager = Object.create(null, {
 
             const $detailsTitle = $('<p>');
             $detailsTitle.addClass('page__title');
-            $detailsTitle.text('Experiences')
+            $detailsTitle.text('Resume & education');
 
             const $detailsBody = $('<p>');
             $detailsBody.addClass('page__body');

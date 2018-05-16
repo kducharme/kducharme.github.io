@@ -47,7 +47,7 @@ const navManager = Object.create(null, {
     navPages: {
         value: function () {
             const $structure = $('<span>');
-            const links = ['About me', 'Design samples', 'Resume & education', 'Development skills']
+            const links = ['About me', 'Experience', 'Development', 'Design samples']
             links.forEach(link => {
                 $link = $('<p>');
                 $link.attr('id', link.split(' ')[0])
@@ -116,7 +116,7 @@ const navManager = Object.create(null, {
                     $('.experience').show();
                     $('.resume, .development, .references, .edgenet, .splitsecnd, .impactful, .wavefire, .asp, .samples').hide();
                     break;
-                case 'Resume':
+                case 'Experience':
                     $('.resume').remove();
                     resumeManager.resumeBlock();
                     $('.experience, .development, .references, .edgenet, .splitsecnd, .impactful, .wavefire, .asp, .samples').hide();

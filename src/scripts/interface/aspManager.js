@@ -25,7 +25,7 @@ const aspManager = Object.create(null, {
 
             const $detailsTitle = $('<p>');
             $detailsTitle.addClass('page__title');
-            $detailsTitle.text('Volunteer Experience Platform')
+            $detailsTitle.text('Volunteer Experience Platform (Interim Head of UX & Growth)')
 
             const $detailsBody = $('<p>');
             $detailsBody.addClass('page__body');
@@ -34,7 +34,7 @@ const aspManager = Object.create(null, {
             const $detailsBodyOne = $('<p>');
             $detailsBodyOne.html(`
             <p class='case__subtitle'>My role</p>
-            <p class='page__body'>After working with ASP for 4 summers during college, I returned in an interim role as Head of UX & Growth to help the organization leverage technology and design to deliver an exception mission trip experience for customers. My role was focused on all aspects of the volunteer experience from learning about ASP to registration to on-site work, as well as finding ways to leverage technology to help the internal team to be more effective in their roles.</p>`);
+            <p class='page__body'>After working with ASP for 4 summers during college, I returned in an interim role as Head of UX & Growth to help the organization leverage technology and design to deliver an exceptional mission trip experience for customers. My role was focused on all aspects of the volunteer experience from learning about ASP to registration to on-site work, as well as finding ways to leverage technology to help the internal team to be more effective in their roles.</p>`);
 
             const $detailsBodyTwo = $('<p>');
             $detailsBodyTwo.html(`
@@ -56,11 +56,6 @@ const aspManager = Object.create(null, {
             
             About 30% of the time, the user is someone volunteering, typically female between 45-60, that's helping coordinate the trip because their son/daughter is participating as well. This type of user has more time and "forgiveness" for a poor experience but is typically less experienced with technology.
             `);
-
-            const $detailsBodyFour = $('<p>');
-            $detailsBodyFour.html(`
-            <p class='case__subtitle'>My role</p>
-            <p class='page__body'>After working with ASP for 4 summers during college, I returned in an interim role as Head of UX & Growth to help the organization leverage technology and design to deliver an exception mission trip experience for customers. My role was focused on all aspects of the volunteer experience from learning about ASP to registration to on-site work, as well as finding ways to leverage technology to help the internal team to be more effective in their roles.</p>`);
 
             const $detailsBodyFive = $('<p>');
             $detailsBodyFive.html(`
@@ -105,7 +100,7 @@ const aspManager = Object.create(null, {
             <p class='case__subtitle'>Sampel visuals</p>
             <p class='page__body'>The following are sample visuals that were critical in updating the organization's UX and growth strategy.</p>`);
 
-            $details.append($detailsTitle, $detailsBody, $detailsBodyOne, $detailsBodyTwo, $detailsBodyThree, $detailsBodyFour, $detailsBodyFive, $detailsBodySix, $detailsBodySeven);
+            $details.append($detailsTitle, $detailsBody, $detailsBodyOne, $detailsBodyTwo, $detailsBodyThree, $detailsBodyFive, $detailsBodySix, $detailsBodySeven);
             return $details;
         }
     },
