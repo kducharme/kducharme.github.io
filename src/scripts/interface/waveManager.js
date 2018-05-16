@@ -25,7 +25,7 @@ const waveManager = Object.create(null, {
 
             const $detailsTitle = $('<p>');
             $detailsTitle.addClass('page__title');
-            $detailsTitle.text('HIPAA Compliance Platform')
+            $detailsTitle.text('HIPAA Compliance Platform (Lead UX Designer)')
 
             const $detailsBody = $('<p>');
             $detailsBody.addClass('page__body');

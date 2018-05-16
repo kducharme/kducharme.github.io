@@ -70,7 +70,7 @@ const navManager = Object.create(null, {
     navStudies: {
         value: function () {
             const $structure = $('<span>');
-            const links = ['Edgenet', 'WaveFire', 'splitsecnd', 'Impactful', 'ASP']
+            const links = ['Edgenet', 'WaveFire', 'splitsecnd', 'ASP', 'Impactful'];
             links.forEach(link => {
                 $link = $('<p>');
                 $link.attr('id', link)
