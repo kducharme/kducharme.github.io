@@ -24,7 +24,7 @@ const splitManager = Object.create(null, {
 
             const $detailsTitle = $('<p>');
             $detailsTitle.addClass('page__title');
-            $detailsTitle.text('Vehicle Analytics Platform')
+            $detailsTitle.text('Vehicle Analytics Platform (VP, UX)')
 
             const $detailsBody = $('<p>');
             $detailsBody.addClass('page__body');

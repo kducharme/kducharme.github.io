@@ -25,7 +25,7 @@ const edgeManager = Object.create(null, {
 
             const $detailsTitle = $('<p>');
             $detailsTitle.addClass('page__title');
-            $detailsTitle.text('Product Content Platform')
+            $detailsTitle.text('Product Content Platform (Lead UX Designer)')
 
             const $detailsBody = $('<p>');
             $detailsBody.addClass('page__body');
