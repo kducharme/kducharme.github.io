@@ -25,7 +25,7 @@ const navManager = Object.create(null, {
             $pages.append($header['Pages'], $pagesLinks);
 
             // Appends case studies (header + links)
-            $caseStudies.append($header['Sample work'], $studiesLinks);
+            $caseStudies.append($header['Case studies'], $studiesLinks);
 
             // Appends pages and case studies to page
             $printArea.append($pages, $caseStudies);
@@ -33,7 +33,7 @@ const navManager = Object.create(null, {
     },
     navHeader: {
         value: function () {
-            const titles = ['Pages', 'Sample work'];
+            const titles = ['Pages', 'Case studies'];
             let headers = {};
             titles.forEach(t => {
                 const $head = $('<p>');
@@ -70,7 +70,7 @@ const navManager = Object.create(null, {
     navStudies: {
         value: function () {
             const $structure = $('<span>');
-            const links = ['Edgenet', 'Impactful', 'WaveFire', 'splitsecnd', 'ASP']
+            const links = ['Edgenet', 'WaveFire', 'splitsecnd', 'Impactful', 'ASP']
             links.forEach(link => {
                 $link = $('<p>');
                 $link.attr('id', link)
