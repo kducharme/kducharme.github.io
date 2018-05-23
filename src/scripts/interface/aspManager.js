@@ -97,7 +97,7 @@ const aspManager = Object.create(null, {
 
             const $detailsBodySeven = $('<p>');
             $detailsBodySeven.html(`
-            <p class='case__subtitle'>Sampel visuals</p>
+            <p class='case__subtitle'>Sample visuals</p>
             <p class='page__body'>The following are sample visuals that were critical in updating the organization's UX and growth strategy.</p>`);
 
             $details.append($detailsTitle, $detailsBody, $detailsBodyOne, $detailsBodyTwo, $detailsBodyThree, $detailsBodyFive, $detailsBodySix, $detailsBodySeven);
