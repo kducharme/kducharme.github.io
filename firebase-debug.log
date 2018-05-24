@@ -1,0 +1,26 @@
+[debug] [2018-05-24T16:28:00.119Z] ----------------------------------------------------------------------
+[debug] [2018-05-24T16:28:00.123Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy
+[debug] [2018-05-24T16:28:00.124Z] CLI Version:   3.18.4
+[debug] [2018-05-24T16:28:00.124Z] Platform:      darwin
+[debug] [2018-05-24T16:28:00.124Z] Node Version:  v6.10.1
+[debug] [2018-05-24T16:28:00.124Z] Time:          Thu May 24 2018 11:28:00 GMT-0500 (CDT)
+[debug] [2018-05-24T16:28:00.125Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-05-24T16:28:00.144Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-05-24T16:28:00.145Z] > authorizing via signed-in user
+[debug] [2018-05-24T16:28:00.148Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/kd-site  
+  
+ Thu May 24 2018 11:28:00 GMT-0500 (CDT)
+[debug] [2018-05-24T16:28:00.494Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-24T16:28:00.496Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/kd-site/tokens  
+  
+ Thu May 24 2018 11:28:00 GMT-0500 (CDT)
+[debug] [2018-05-24T16:28:00.998Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'kd-site'...
+[info] 
+[info] i  deploying hosting
+[info] i  hosting: preparing dist directory for upload...
+[debug] [2018-05-24T16:28:04.273Z] >>> HTTP REQUEST PUT https://deploy.firebase.com/v1/hosting/kd-site/uploads/-LDHycBPx70SUlMIqTNs?fileCount=96&message=  
+  
+ Thu May 24 2018 11:28:04 GMT-0500 (CDT)

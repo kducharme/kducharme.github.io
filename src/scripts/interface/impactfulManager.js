@@ -25,11 +25,11 @@ const impactfulManager = Object.create(null, {
 
             const $detailsTitle = $('<p>');
             $detailsTitle.addClass('page__title');
-            $detailsTitle.text('Non-Profit Management Platform')
+            $detailsTitle.text('Non-Profit Management Platform (Founder)');
 
             const $detailsBody = $('<p>');
             $detailsBody.addClass('page__body');
-            $detailsBody.text(`Impactful is an open source project that I'm building with friends to help quantify the impact that nonprofits have by utilizing a bottom-up project management approach. During my years working with non-profits, I found it extremely difficult for organizations to understand the impact that their mission was having on their target audience due to fragmented software, broken processes, and a lack of training. To help overcome this, we're building Impactful, which is a one-stop-shop to manage programs & projects, as well as simplify how digital assets are distributed internally.`);
+            $detailsBody.text(`Impactful is an open source project that I'm building to help quantify the impact that nonprofits have by utilizing a bottom-up project management approach. During my years working with non-profits, I found it extremely difficult for organizations to understand the impact that their mission was having on their target audience due to fragmented software, broken processes, and a lack of training. To help overcome this, we're building Impactful, which is a one-stop-shop to manage programs & projects, as well as simplify how digital assets are distributed internally.`);
 
             const $detailsBodyTwo = $('<p>');
             $detailsBodyTwo.addClass('page__body--two');

@@ -33,7 +33,7 @@ const experienceManager = Object.create(null, {
 
             const $aboutBodyTwo = $('<p>');
             $aboutBodyTwo.addClass('experience__about--bodyTwo');
-            $aboutBodyTwo.text(`Before focusing on product design full-time, I wore a variety of hats ranging from English teacher 👨‍🏫 to ballroom dance instructor 💃 to contsruction manager 👷‍♂️  to coffee importer ☕️. Luckily, although these roles weren't focusing on product design, they helped shape how I connect, teach, communicate, learn, and grow -- all integral parts of being a designer.`);
+            $aboutBodyTwo.text(`Before focusing on product design full-time, I wore a variety of hats ranging from English teacher 👨‍🏫 to ballroom dance instructor 💃 to construction manager 👷‍♂️  to coffee importer ☕️. Luckily, although these roles weren't focusing on product design, they helped shape how I connect, teach, communicate, learn, and grow -- all integral parts of being a designer.`);
 
             $about.append($aboutTitle, $aboutBody, $aboutBodyTwo);
             return $about;
@@ -41,16 +41,16 @@ const experienceManager = Object.create(null, {
     },
     experienceSkills: {
         value: function () {
-            const $skills = $('<span>');
-            $skills.addClass('skillsRow');
+            const $skills = $('<span>')
+                .addClass('skillsRow');
 
             // First skill
-            const $skillOne = $('<span>');
-            $skillOne.addClass('skill');
+            const $skillOne = $('<span>')
+                .addClass('skill');
 
-            const $skillOneTitle = $('<p>');
-            $skillOneTitle.addClass('skill__title');
-            $skillOneTitle.text('User Experience Design')
+            const $skillOneTitle = $('<p>')
+                .addClass('skill__title')
+                .text('User Experience Design');
 
             const $skillOneBody = $('<p>');
             $skillOneBody.addClass('skill__body');
@@ -67,7 +67,7 @@ const experienceManager = Object.create(null, {
 
             const $skillTwoBody = $('<p>');
             $skillTwoBody.addClass('skill__body');
-            $skillTwoBody.text(`Beyond a pixel perfect mockup, I work to build ideas to live through development, utilizing HTMl, CSS, and JavaScript (plus React & jQuery)`)
+            $skillTwoBody.text(`Beyond a pixel perfect mockup, I work to build ideas to live through development, utilizing HTML, CSS, and JavaScript (plus React & jQuery)`);
             $skillTwo.append($skillTwoTitle, $skillTwoBody);
             
             $skills.append($skillOne, $skillTwo);
